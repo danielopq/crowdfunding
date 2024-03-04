@@ -13,6 +13,7 @@ body{
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	background-color: #fafafa;
 }
 
 header{
@@ -53,3 +54,109 @@ header{
 #menu-links > p{
 	margin: auto 0px auto 30px;
 }
+
+#main{
+	width: 730px;
+	height: 1000px;
+	z-index: 1;
+	position: absolute;
+	display:flex;
+	flex-direction: column;
+	margin-top: 310px;
+}
+
+#main-top{
+	height: 580px;
+	display:flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+}
+
+#top-logo{
+	z-index: 2;
+	position:relative;
+	margin-top: -30px;
+}
+
+#top-buttons{
+	width: 630px;
+	height: 60px;
+	margin-top: 20px;
+}
+
+#top-buttons-back{
+	width: 200px;
+	float: left;
+}
+
+#top-buttons-bookmark{
+	width: 200px;
+	float: right;
+}
+
+#main-data{
+	height: 210px;
+}
+
+#main-about{
+	height: 1200px;
+}
+
+#borrar{
+	width: 150px;
+}
+
+
+.main-section{
+	width: inherit;
+	margin-bottom: 25px;
+	background-color: white;
+	border: solid 2px #f6f6f6;
+	border-radius: 8px;
+}
+
+.main-title{
+	color: black;
+	font-size: 30px;
+	font-weight: 700;
+	line-height: 0.3;
+}
+
+.main-text{
+	color: #797979;
+	font-size: 17px;
+	font-weight: 400;
+}
+
+.active-button{
+	background-color: hsl(176, 50%, 47%);
+	color: white;
+}
+
+.active-button:hover{
+	cursor:pointer;
+	background-color: hsl(176, 72%, 28%);
+}
+
+.button{
+	height: 60px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 15px;
+	font-weight: 700;
+	border-radius: 30px;
+	text-align: center;
+}
+
+.disable-bookmark{
+	background: #f4f4f4 url("../images/icon-bookmark.svg") left/60px no-repeat;
+	color: #727272;
+}
+
+.disable-bookmark:hover{
+	opacity: 70%;
+	cursor:pointer;
+}
+
