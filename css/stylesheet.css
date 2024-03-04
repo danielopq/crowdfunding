@@ -1,3 +1,55 @@
 @charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Commissioner:wght@100..900&display=swap');
 /* CSS Document */
 
+*{
+	font-family: 'Commissioner';
+}
+
+body{
+	margin: 0px;
+	padding: 0px;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+header{
+	display: flex;
+	justify-content: center;
+	width: 1440px;
+	height: 400px;
+	background: url("../images/image-hero-desktop.jpg") center 100% no-repeat;
+}
+
+#menu{
+	width: 1100px;
+	height: 20px;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+
+#menu > div {
+	display: flex;
+	height: inherit;
+}
+
+#menu-logo{
+	align-self: flex-start;
+}
+
+#menu-links{
+	align-self: flex-end;
+	flex-direction: row;
+	align-items: center;
+	font-size: 15px;
+	font-weight: 400;
+	color:white;
+}
+
+#menu-links > p{
+	margin: auto 0px auto 30px;
+}
