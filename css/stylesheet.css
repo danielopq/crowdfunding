@@ -57,7 +57,7 @@ header{
 
 #main{
 	width: 730px;
-	height: 1000px;
+	height: 1800px;
 	z-index: 1;
 	position: absolute;
 	display:flex;
@@ -66,7 +66,7 @@ header{
 }
 
 #main-top{
-	height: 580px;
+	height: 270px;
 	display:flex;
 	flex-direction: column;
 	align-items: center;
@@ -77,6 +77,7 @@ header{
 	z-index: 2;
 	position:relative;
 	margin-top: -30px;
+	margin-bottom: 20px;
 }
 
 #top-buttons{
@@ -96,18 +97,70 @@ header{
 }
 
 #main-data{
-	height: 210px;
+	height: 240px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-end;
+}
+
+#main-data > div{
+	width: 630px;
+}
+
+#data-amounts{
+	height: 80px;
+	display:flex;
+	flex-direction:row;
+	justify-content: center;
+	align-items: center;
+	margin-top: 50px;
+}
+
+#data-amounts > div{
+	width: 243px;
+}
+
+#data-amounts p{
+	margin-left: 50px;
+}
+
+#amounts-total{
+	border-left: solid 1px #f6f6f6;
+	border-right: solid 1px #f6f6f6;
+}
+
+#data-backgroundBar{
+	height: 10px;
+	border-radius: 5px;
+	background-color: #f4f4f4;
+	margin-top: 50px;
+	margin-bottom: 50px;
+}
+
+#data-progressBar{
+	width: 520px;
+	height: inherit;
+	border-radius: 5px;
+	background-color: hsl(176, 50%, 47%);
 }
 
 #main-about{
 	height: 1200px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 25px;
 }
 
-#borrar{
-	width: 150px;
+#main-about > div{
+	width: 630px;
+	margin-bottom: 25px;
 }
-
-
+#mahogany{
+	opacity: 40%;
+}
 .main-section{
 	width: inherit;
 	margin-bottom: 25px;
@@ -129,16 +182,6 @@ header{
 	font-weight: 400;
 }
 
-.active-button{
-	background-color: hsl(176, 50%, 47%);
-	color: white;
-}
-
-.active-button:hover{
-	cursor:pointer;
-	background-color: hsl(176, 72%, 28%);
-}
-
 .button{
 	height: 60px;
 	display: flex;
@@ -148,6 +191,21 @@ header{
 	font-weight: 700;
 	border-radius: 30px;
 	text-align: center;
+}
+
+.enable-button{
+	background-color: hsl(176, 50%, 47%);
+	color: white;
+}
+
+.enable-button:hover{
+	cursor:pointer;
+	background-color: hsl(176, 72%, 28%);
+}
+
+.disable-button{
+	background-color: hsl(0, 0%, 48%);
+	color: white;
 }
 
 .disable-bookmark{
@@ -160,3 +218,73 @@ header{
 	cursor:pointer;
 }
 
+.data-numbers{
+	font-size: 30px;
+	font-weight: 700;
+	color: black;
+	line-height: 0.1;
+}
+.default-title{
+	font-size: 21px;
+	font-weight: 700;
+	color: black;
+}
+.default-text{
+	font-size: 16px;
+	font-weight: 400;
+	color: hsl(0, 0%, 48%);
+}
+
+.item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	border: solid 2px #dbdbdb;
+	border-radius: 8px;
+}
+
+.item > div{
+	width: 570px;
+}
+
+.item-desc{
+	margin-top: 35px;
+}
+
+.item-name{
+	float:left;
+	font-size: 21px;
+	font-weight: 700;
+	color: black;
+}
+
+.item-pledge{
+	float:right;
+	font-size: 16px;
+	font-weight: 500;
+	color: hsl(176, 50%, 47%);
+}
+
+.item-stock{
+	width: 410px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.item-units{
+	font-size: 33px;
+	font-weight: 700;
+	color: black;
+}
+
+.item-bottom{
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.reward-bt{
+	width:160px;
+	float: right;
+}
