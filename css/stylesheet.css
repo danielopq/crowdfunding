@@ -210,6 +210,11 @@ input[type="text"]:focus{
 	color:black;
 }
 
+.desc-itemName:hover{
+	cursor: pointer;
+	color: hsl(176, 50%, 47%);
+}
+
 .desc-itemPledge{
 	font-size: 16px;
 	font-weight:700;
