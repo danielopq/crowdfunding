@@ -39,8 +39,24 @@ input[type='radio']:before {
 	 background: hsl(176, 50%, 47%);
 }
 
+.radio-enable{
+	cursor: pointer;
+}
+
+input[type="text"]{
+	width:30px;
+	margin-left: 10px;
+	border:none;
+	font-size: 14px;
+	font-weight: 700;
+}
+
+input[type="text"]:focus{
+	border-color:white;
+	outline: none;
+}
+
 .button{
-	height: 60px;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -65,6 +81,39 @@ input[type='radio']:before {
 	color: white;
 }
 
+.bookmark{
+	height: 60px;
+	background: #f4f4f4 url("../images/icon-bookmark.svg") left/60px no-repeat;
+	color: #727272;
+}
+
+.bookmark:hover{
+	opacity: 70%;
+	cursor:pointer;
+}
+
+.bookmarked{
+	height: 60px;
+	background: #f4f4f4 url("../images/icon-bookmarked.svg") left/60px no-repeat;
+	color: hsl(176, 72%, 28%);
+}
+
+.bookmarked:hover{
+	opacity: 70%;
+	cursor:pointer;
+}
+
+.continue-bt{
+	width: 105px;
+	height: 45px;
+}
+
+.reward-bt{
+	width:160px;
+	height: 60px;
+	float: right;
+}
+
 .default-title{
 	font-size: 21px;
 	font-weight: 700;
@@ -76,6 +125,11 @@ input[type='radio']:before {
 	color: hsl(0, 0%, 48%);
 }
 
+.dollar{
+	font-size: 16px;
+	font-weight: 700;
+	color: #dbdbdb;
+}
 /*--------------------fullCover--------------------*/
 
 #fullCover{
@@ -92,11 +146,11 @@ input[type='radio']:before {
 	flex-direction: column;
 	align-items: center;
 	z-index: 300;
-	position: fixed;
+	position: absolute;
 	margin:auto;
 	background-color: white;
 	width: 730px;
-	height: 800px;
+	min-height: 800px;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
@@ -105,6 +159,10 @@ input[type='radio']:before {
 
 #backProject-close{
 	width: inherit;
+}
+
+#back-Mahogany{
+	opacity: 0.3;
 }
 
 .close{
@@ -169,6 +227,45 @@ input[type='radio']:before {
 	color:black;
 }
 
+.pledge{
+	height: 95px;
+	display:none;
+	flex-direction: row;
+	align-items: center;
+	border-top: solid 1px #dbdbdb;
+	margin-top: 10px;
+}
+
+.pledge > div{
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+}
+
+.pledge-text{
+	justify-content: flex-start;
+}
+
+.pledge-submit{
+	justify-content: flex-end;
+}
+
+.submit-input{
+	width: 100px;
+	height: 45px;
+	display:flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: center;
+	border: solid 1px #dbdbdb;
+	border-radius: 22px;
+	margin-right: 15px;
+}
+
+.submit-button{
+	
+}
 /*--------------------header--------------------*/
 
 header{
@@ -273,25 +370,6 @@ header{
 #top-buttons-bookmark{
 	width: 200px;
 	float: right;
-}
-.bookmark{
-	background: #f4f4f4 url("../images/icon-bookmark.svg") left/60px no-repeat;
-	color: #727272;
-}
-
-.bookmark:hover{
-	opacity: 70%;
-	cursor:pointer;
-}
-
-.bookmarked{
-	background: #f4f4f4 url("../images/icon-bookmarked.svg") left/60px no-repeat;
-	color: hsl(176, 72%, 28%);
-}
-
-.bookmarked:hover{
-	opacity: 70%;
-	cursor:pointer;
 }
 
 /*--------------------main-data--------------------*/
@@ -414,9 +492,4 @@ header{
 	display: flex;
 	flex-direction: row;
 	align-items: center;
-}
-
-.reward-bt{
-	width:160px;
-	float: right;
 }
