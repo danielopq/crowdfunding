@@ -2,6 +2,7 @@
 window.onload=start;
 /*------------------- start -------------------*/
 function start(){
+	document.getElementById("menu-mb-icon").addEventListener('click',showMobileMenu,false);
 	document.getElementById("top-buttons-back").addEventListener('click',openOrder,false);
 	document.getElementById("bamboo-reward-bt").addEventListener('click',openOrder,false);
 	document.getElementById("black-reward-bt").addEventListener('click',openOrder,false);
@@ -21,6 +22,20 @@ function start(){
 	document.getElementById("bamboo-inp").addEventListener('keyup',validateNumber,false);
 	document.getElementById("black-inp").addEventListener('keyup',validateNumber,false);
 	document.getElementById("mahogany-inp").addEventListener('keyup',validateNumber,false);
+}
+
+/*------------------- showMobileMenu -------------------*/
+
+function showMobileMenu(){
+
+	if(document.getElementById("menu-mb-icon").attributes["class"].value == "mb-icon-hamburger"){
+		document.getElementById("menu-mb-icon").attributes["class"].value = "mb-icon-close";
+		document.getElementById("mobile-links").style.display = "flex";
+	}else{
+		document.getElementById("menu-mb-icon").attributes["class"].value = "mb-icon-hamburger";
+		document.getElementById("mobile-links").style.display = "none";
+	}
+
 }
 
 /*------------------- bookmark -------------------*/

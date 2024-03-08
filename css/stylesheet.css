@@ -211,14 +211,23 @@ header{
 
 }
 
-#menu-hamburger{
-	display: none;
+#menu-mb-icon{
+	width: 20px;
+	display: flex;
 	align-self: flex-end;
 	align-items: center;
 }
 
-#menu-hamburger:hover{
+#menu-mb-icon:hover{
 	cursor: pointer;
+}
+
+.mb-icon-hamburger{
+	background: url("../images/icon-hamburger.svg") center 100% no-repeat;
+}
+
+.mb-icon-close{
+	background: url("../images/icon-close-menu.svg") center 100% no-repeat;
 }
 
 #menu-links{
