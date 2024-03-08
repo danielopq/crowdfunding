@@ -74,7 +74,7 @@
 					<p class="item-units">101</p>
 					<p class="default-text">&nbsp;left</p>
 				</div>
-				<div class="enable-button button reward-bt">Select Reward</div>
+				<div id="bamboo-reward-bt" class="enable-button button reward-bt">Select Reward</div>
 			</div>
 			</div>
 			<div id="BlackEdition" class="item">
@@ -90,7 +90,7 @@
 						<p class="item-units">64</p>
 						<p class="default-text">&nbsp;left</p>
 					</div>
-					<div class="enable-button button reward-bt">Select Reward</div>
+					<div id="black-reward-bt" class="enable-button button reward-bt">Select Reward</div>
 				</div>
 			</div>
 			<div id="mahogany" class="item">
@@ -106,11 +106,14 @@
 						<p class="item-units">0</p>
 						<p class="default-text">&nbsp;left</p>
 					</div>
-					<div class="disable-button button reward-bt">Out of stock</div>
+					<div id="mahogany-reward-bt" class="disable-button button reward-bt">Out of stock</div>
 				</div>
 			</div>
 		</div>
 	</div>
+	
+	
+	
 <div id="fullCover">
 	<div id="backProject">
 		<div id="backProject-close">
@@ -120,22 +123,31 @@
 			<p class="default-title">Back this project</p>
 			<p class="default-text">Want to support us in bringing Mastercraft Bamboo Riser out the world?</p>
 		</div>
+		
 		<div id="back-noPledge" class="backPro-parag item">
 			<div class="parag-desc">
 				<div class="desc-itemSelector">
-					<input type="radio" id="radio-noPledge" name="item" value="no-pledge" disabled>
-					<p class="desc-itemName">Pledge with no reward</p>
+					<input type="radio" id="radio-noPledge" name="item" value="no-pledge" disabled class="item-rad">
+					<p id="noPledge-bt" class="desc-itemName inStock">Pledge with no reward</p>
 				</div>
 			</div>
 			<div>
 				<p class="default-text parag-reward">Choose to support us without a reward if you simply believe in our project. As a backer, you will be signed up to receive product updates via email.</p>
 			</div>
+			<div id="no-pledge" class="pledge">
+				<div class="pledge-text"><p class="default-text">Enter your pledge</p></div>
+				<div class="pledge-submit">
+					<div class="submit-input dollar">$<input id="noPledge-inp" type="text" value="0"></div>
+					<div id="noPledge-continue" class="submit-button button enable-button continue-bt">Continue</div>
+				</div>
+			</div>
 		</div>
+		
 		<div id="back-Bambootand" class="backPro-parag item">
 			<div class="parag-desc">
 				<div class="desc-itemSelector">
-					<input type="radio" id="radio-bamboo" name="item" value="bamboo" disabled>
-					<p class="desc-itemName">Bamboo Stand</p>
+					<input type="radio" id="radio-bamboo" name="item" value="bamboo" disabled class="item-rad">
+					<p id="bamboo-bt" class="desc-itemName inStock">Bamboo Stand</p>
 					<p class="desc-itemPledge">Pledge $25 or more</p>
 				</div>
 				<div class="desc-amountLeft"><p class="desc-amount">101</p><p class="default-text">left</p></div>
@@ -143,19 +155,20 @@
 			<div>
 				<p class="default-text parag-reward">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign and you'll be added to a special Backer member list.</p>
 			</div>
-			<div class="pledge">
+			<div id="bamboo-pledge" class="pledge">
 				<div class="pledge-text"><p class="default-text">Enter your pledge</p></div>
 				<div class="pledge-submit">
-					<div class="submit-input dollar">$<input id="pledge-bamboo" type="text" value="25"></div>
-					<div class="submit-button button enable-button continue-bt"><div class="">Continue</div></div>
+					<div class="submit-input dollar">$<input id="bamboo-inp" type="text" value="25"></div>
+					<div id="bamboo-continue" class="submit-button button enable-button continue-bt">Continue</div>
 				</div>
 			</div>
 		</div>
+		
 		<div id="back-BlackEdition" class="backPro-parag item">
 			<div class="parag-desc">
 				<div class="desc-itemSelector">
-					<input type="radio" id="radio-black" name="item" value="black" disabled>
-					<p class="desc-itemName">Black Edition Stand</p>
+					<input type="radio" id="radio-black" name="item" value="black" disabled class="item-rad">
+					<p id="black-bt" class="desc-itemName inStock">Black Edition Stand</p>
 					<p class="desc-itemPledge">Pledge $75 or more</p>
 				</div>
 				<div class="desc-amountLeft"><p class="desc-amount">64</p><p class="default-text">left</p></div>
@@ -163,19 +176,20 @@
 			<div>
 				<p class="default-text parag-reward">You get a Black Special Edition computer stand and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
 			</div>
-			<div class="pledge">
+			<div id="black-pledge" class="pledge">
 				<div class="pledge-text"><p class="default-text">Enter your pledge</p></div>
 				<div class="pledge-submit">
-					<div class="submit-input dollar">$<input id="pledge-black" type="text" value="75"></div>
-					<div class="submit-button button enable-button continue-bt"><div class="">Continue</div></div>
+					<div class="submit-input dollar">$<input id="black-inp" type="text" value="75"></div>
+					<div id="black-continue" class="submit-button button enable-button continue-bt">Continue</div>
 				</div>
 			</div>
 		</div>
+		
 		<div id="back-Mahogany" class="backPro-parag item">
 			<div class="parag-desc">
 				<div class="desc-itemSelector">
-					<input type="radio" id="radio-mahogany" name="item" value="mahogany" disabled>
-					<p class="desc-itemName">Mahogany Special Edition</p>
+					<input type="radio" id="radio-mahogany" name="item" value="mahogany" disabled class="item-rad">
+					<p id="mahogany-bt" class="desc-itemName">Mahogany Special Edition</p>
 					<p class="desc-itemPledge">Pledge $200 or more</p>
 				</div>
 				<div class="desc-amountLeft"><p class="desc-amount">0</p><p class="default-text">left</p></div>
@@ -183,11 +197,11 @@
 			<div>
 				<p class="default-text parag-reward">You get two Special Edition Mahogany stands, a Backer T-Shirt and a personal thank you. You'll be added to our Backer member list. Shipping is included.</p>
 			</div>
-			<div class="pledge">
+			<div id="mahogany-pledge" class="pledge">
 				<div class="pledge-text"><p class="default-text">Enter your pledge</p></div>
 				<div class="pledge-submit">
-					<div class="submit-input dollar">$<input id="pledge-mahogany" type="text" value="200"></div>
-					<div class="submit-button button enable-button continue-bt"><div class="">Continue</div></div>
+					<div class="submit-input dollar">$<input id="mahogany-inp" type="text" value="200"></div>
+					<div id="mahogany-continue" class="submit-button button enable-button continue-bt">Continue</div>
 				</div>
 			</div>
 		</div>
