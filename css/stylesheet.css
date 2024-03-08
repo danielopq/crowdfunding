@@ -158,20 +158,34 @@ header{
 	height: 20px;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	flex-wrap: wrap;
 	margin-top: 50px;
 }
 
 #menu > div {
-	display: flex;
-	height: inherit;
+	height: 20px;
 }
 
 #menu-logo{
+	display: flex;
 	align-self: flex-start;
+
 }
 
+#menu-hamburger{
+	display: none;
+	align-self: flex-end;
+	align-items: center;
+}
+
+#menu-hamburger:hover{
+	cursor: pointer;
+}
+
+
 #menu-links{
+	display: flex;
 	align-self: flex-end;
 	flex-direction: row;
 	align-items: center;
@@ -542,3 +556,25 @@ header{
 	line-height: 2;
 	margin-bottom: 30px;
 }
+
+@media screen and (max-width: 480px) {
+	header{
+		width: 480px;
+		height: 320px;
+		background: url("../images/image-hero-mobile.jpg") bottom/100% no-repeat;
+	}
+	
+	#menu{
+		width: 430px;
+		height: 20px;
+		margin-top: 30px;
+	}
+	
+	#menu-hamburger{
+		display: flex;
+	}
+	#menu-links{
+		display: none;
+	}
+}
+
