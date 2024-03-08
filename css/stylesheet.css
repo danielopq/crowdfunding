@@ -56,6 +56,11 @@ input[type="text"]:focus{
 	outline: none;
 }
 
+.section-bt:hover{
+	cursor: pointer;
+	opacity: 0.6;
+}
+
 .button{
 	display: flex;
 	align-items: center;
