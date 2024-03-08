@@ -61,6 +61,18 @@ input[type="text"]:focus{
 	opacity: 0.6;
 }
 
+.section-mb-bt{
+	margin-left: 25px;
+	color: black;
+	font-size: 18px;
+	font-weight: 500;
+}
+
+.section-mb-bt:hover{
+	cursor:pointer;
+	opacity: 0.6;
+}
+
 .button{
 	display: flex;
 	align-items: center;
@@ -163,6 +175,32 @@ header{
 	margin-top: 50px;
 }
 
+#mobile-links{
+	position: absolute;
+	z-index: 500;
+	width: 430px;
+	height: 210px;
+	display: none;
+	flex-direction: column;
+	align-items: center;
+	background-color: white;
+	border-radius: 5px;
+	top: 90px;
+}
+
+#mobile-links div{
+	display: flex;
+	align-items: center;
+	width: inherit;
+	height: 70px;
+	text-align: left;
+}
+
+#mb-discover{
+	border-top: solid 1px black;
+	border-bottom: solid 1px black;
+}
+
 #menu > div {
 	height: 20px;
 }
@@ -182,7 +220,6 @@ header{
 #menu-hamburger:hover{
 	cursor: pointer;
 }
-
 
 #menu-links{
 	display: flex;
