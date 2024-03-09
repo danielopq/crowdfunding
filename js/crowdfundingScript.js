@@ -2,7 +2,8 @@
 window.onload=start;
 /*------------------- start -------------------*/
 function start(){
-	document.getElementById("menu-mb-icon").addEventListener('click',showMobileMenu,false);
+	document.getElementById("menu-hamburger").addEventListener('click',showMobileMenu,false);
+	document.getElementById("mobile-close").addEventListener('click',hideMobileMenu,false);
 	document.getElementById("top-buttons-back").addEventListener('click',openOrder,false);
 	document.getElementById("bamboo-reward-bt").addEventListener('click',openOrder,false);
 	document.getElementById("black-reward-bt").addEventListener('click',openOrder,false);
@@ -27,26 +28,34 @@ function start(){
 /*------------------- showMobileMenu -------------------*/
 
 function showMobileMenu(){
+	document.getElementById("menu-mobile").style.display = "flex";
+	document.getElementById("menu-logo").style.display = "none";
+	document.getElementById("menu-hamburger").style.display = "none";
+}	
 
-	if(document.getElementById("menu-mb-icon").attributes["class"].value == "mb-icon-hamburger"){
-		document.getElementById("menu-mb-icon").attributes["class"].value = "mb-icon-close";
-		document.getElementById("mobile-links").style.display = "flex";
-	}else{
-		document.getElementById("menu-mb-icon").attributes["class"].value = "mb-icon-hamburger";
-		document.getElementById("mobile-links").style.display = "none";
-	}
+/*------------------- hideMobileMenu -------------------*/
 
+function hideMobileMenu(){
+	document.getElementById("menu-mobile").style.display = "none";
+	document.getElementById("menu-logo").style.display = "flex";
+	document.getElementById("menu-hamburger").style.display = "flex";
 }
 
 /*------------------- bookmark -------------------*/
 
 function bookmark(){
+	var displayState = window.getComputedStyle(document.getElementById("bt-bookmark-text"), null).getPropertyValue("display");
+
 	if(document.getElementById("top-buttons-bookmark").attributes["class"].value == "bookmark button"){
 		document.getElementById("top-buttons-bookmark").setAttribute("class","bookmarked button");
-		document.getElementById("top-buttons-bookmark").innerHTML = "&emsp;&emsp;Bookmark";
+		if(displayState == "flex"){
+			document.getElementById("top-buttons-bookmark").innerHTML = "&emsp;&emsp;Bookmark";
+		}
 	}else{
 		document.getElementById("top-buttons-bookmark").setAttribute("class","bookmark button");
-		document.getElementById("top-buttons-bookmark").innerHTML = "&emsp;&emsp;Bookmarked";
+		if(displayState == "flex"){
+			document.getElementById("top-buttons-bookmark").innerHTML = "&emsp;&emsp;Bookmarked";
+		}
 	}
 }
 
@@ -54,7 +63,7 @@ function bookmark(){
 
 function openOrder(event){
 	resetPledges();
-	document.getElementById("fullCover").style.display = "flex";
+	document.getElementById("order").style.display = "flex";
 	document.getElementById("backProject").style.display = "flex";
 
 	if(event.target.attributes["class"].value.indexOf("disable-button") == -1){
@@ -132,7 +141,7 @@ function sendOrder(event){
 /*------------------- closeOrder -------------------*/
 
 function closeOrder(){
-	document.getElementById("fullCover").style.display = "none";
+	document.getElementById("order").style.display = "none";
 	document.getElementById("backProject").style.display = "none";
 	document.getElementById("orderCompleted").style.display = "none";
 }
