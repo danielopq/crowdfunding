@@ -703,5 +703,50 @@ header{
 	.bookmarked{
 		width: 60px;
 	}
+	
+/*--------------------main-data--------------------*/
+
+#main-data{
+	height: 410px;
+}
+
+#data-amounts{
+	width: 430px;
+	height: 310px;
+	flex-direction:column;
+	margin-top: 20px;
+}
+
+#data-amounts > div{
+	width: 130px;
+	text-align: center;
+}
+
+#data-amounts p{
+	margin-left: 0px;
+}
+
+#amounts-total{
+	border-left: none;
+	border-right: none;
+	border-top: solid 2px #f6f6f6;
+	border-bottom: solid 2px #f6f6f6;
+}
+	
+#data-backgroundBar{
+	width: 380px;
+	margin: auto;
+}
+
+#data-progressBar{
+	width: 285px;
+}
+
+.data-numbers{
+	font-size: 30px;
+	font-weight: 700;
+	color: black;
+	line-height: 0.1;
+}
 }
 
