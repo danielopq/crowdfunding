@@ -13,12 +13,12 @@
 
 ## Overview
 
-Frontend development for a crowdfunding website. It is optimized for desktop and mobile users (480px). The elements have been set according to the images provided. Built with HTML, CSS and JavaScript.
+Frontend development for a crowdfunding website. It is optimized for both desktop and mobile users. The elements have been arranged according to the provided images. The website was built using only HTML and CSS, with no frameworks or libraries used.
 
 ### Screenshot
 
-- Desktop version: [https://github.com/danielopq/crowdfunding/main/screenshots/desktop.jpg]
-- Mobile version: [https://github.com/danielopq/crowdfunding/main/screenshots/mobile.jpg]
+- Desktop version: [https://github.com/danielopq/crowdfunding/blob/main/screenshots/desktop.jpg]
+- Mobile version: [https://github.com/danielopq/crowdfunding/blob/main/screenshots/mobile.jpg]
 
 
 ### Links
@@ -27,30 +27,20 @@ Frontend development for a crowdfunding website. It is optimized for desktop and
 
 ## My process
 
-I created the website entirely for the desktop version. Once all of the elements were in place and with the right design requirement, I adapted it to the mobile version using just a CSS media query.
+I created the website entirely for the desktop version. Once all of the elements were in place and met the design requirements, I adapted it to the mobile version using just a CSS media query.
 
 ### Built with
 
-- Adobe dreamweaver
+- Adobe dreamweaver / visual studio code
 - Adobe photoshop
+- Figma
 - Git
-- HTML5
+- HTML
 - CSS
-- JavaScript
-
-### Useful resources
-
-- [https://www.w3schools.com] - I constantly use this website while I am building website with CSS.
 
 ## Author
 
-My name is Daniel Martinez. I am eager to be given a role as a junior position where I can gain further knowledge and experience.
-
-I demonstrated strong academic performance in database design and management (SQL), object-oriented programming (JAVA) and website development (HTML, PHP, JavaScript, CSS). The courses I have completed have given me a solid knowledge in the software development area and I have a proven ability to learn challenging concepts quickly.
-
-In addition to this I possess a Bachelor's degree in visual arts and communication that has provided me advanced design skills. I am also able to work within tight deadlines and to develop multiple projects simultaneously; therefore I believe I would be a very strong junior asset to any organization.
-
-If you agree that I would make a valuable addition to your team, please feel free to call me at 07 778 639 835 or email me at danielopq@gmail.com. 
+I am a focused and dedicated professional with a strong educational foundation and hands-on experience in programming and web development. My expertise in PHP, SQL, JavaScript, HTML, CSS, JAVA and other modern web technologies enables me to build engaging, efficient, and visually appealing websites that meet both user needs and business goals.
 
 - linkedin - [www.linkedin.com/in/danielmartinezduque]
 
