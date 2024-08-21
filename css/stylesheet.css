@@ -16,6 +16,9 @@ body {
 	align-items: center;
 	background-color: #fafafa;
 }
+h1{
+	padding: 0px;
+}
 input[type="text"] {
 	width: 30px;
 	margin-left: 10px;
@@ -146,8 +149,8 @@ menu {
 	flex-direction: row;
 	justify-content: space-between;
 	margin: 0px;
-	padding: 50px 166px 0px 166px;
-	background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
+	padding: 48px 166px 0px 166px;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 #menu > div {
@@ -171,8 +174,7 @@ menu {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	font-size: 13px;
-	font-weight: 400;
+	font: 400 13px 'Commissioner';
 	color: white;
 }
 
@@ -235,7 +237,7 @@ menu {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
-	margin-top: 310px;
+	margin-top: 308px;
 }
 .main-section {
 	width: inherit;
@@ -255,13 +257,32 @@ menu {
 #top-logo {
 	z-index: 2;
 	position: relative;
-	margin-top: -30px;
-	margin-bottom: 20px;
+	margin: -30px 0px 28px 0px;
 }
+#top-text{
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+}
+
+#main-title {
+	height: 34px;
+	margin: 0px 0px 0px 15px;
+	color: black;
+	font: 700 28px 'Commissioner';
+}
+
+#main-text {
+	height: 20px;
+	color: #797979;
+	font: 400 16px 'Commissioner';
+}
+
 #top-buttons {
 	width: 630px;
 	height: 60px;
-	margin-top: 20px;
+	margin-top: 28px;
 }
 #top-buttons-back {
 	float: left;
@@ -272,17 +293,7 @@ menu {
 #bt-bookmark-text {
 	display: block;
 }
-.main-title {
-	color: black;
-	font-size: 30px;
-	font-weight: 700;
-	line-height: 0.3;
-}
-.main-text {
-	color: #797979;
-	font-size: 17px;
-	font-weight: 400;
-}
+
 /*--------------------main-data--------------------*/
 #main-data {
 	height: 240px;
@@ -598,7 +609,7 @@ menu {
 	#top-text {
 		display: flex;
 		flex-direction: column;
-		align-items: center;
+		align-items: center;	
 	}
 	#top-buttons {
 		width: 380px;
