@@ -137,48 +137,47 @@ header {
 	height: 400px;
 	background: url("../images/image-hero-desktop.jpg") center 100% no-repeat;
 }
-#menu {
-	width: 1100px;
+
+menu {
+	width: 1109px;
 	height: 20px;
 	display: flex;
-	flex-direction: column;
-	align-items: center;
-	flex-wrap: wrap;
-	margin-top: 50px;
+	flex-direction: row;
+	justify-content: flex-end;
+	margin: 48px 0px 0px;
+	padding: 0px;
+	background: url('../images/logo.svg') left/128px no-repeat;
 }
-#menu-top {
-	width: inherit;
-	overflow: hidden;
-}
-#menu-logo {
-	float: left;
-}
+
 #menu > div {
 	height: 20px;
 }
+
 #menu-hamburger {
 	display: none;
-	float: right;
-	height: 20px;
 	width: 20px;
 	background: url("../images/icon-hamburger.svg") center 100% no-repeat;
 }
+
 #menu-links {
-	float: right;
+	width: 224px;
 	display: flex;
-	align-self: flex-end;
 	flex-direction: row;
 	align-items: center;
-	font-size: 15px;
+	justify-content: space-between;
+	font-size: 13px;
 	font-weight: 400;
 	color: white;
 }
+
 #menu-links > p {
-	margin: auto 0px auto 30px;
+	height: 16px;
 }
+
 .menu-icon:hover {
 	cursor: pointer;
 }
+
 #menu-mobile {
 	display: none;
 	flex-direction: column;
