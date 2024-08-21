@@ -4,6 +4,7 @@
 /*--------------------General--------------------*/
 * {
 	font-family: 'Commissioner';
+	box-sizing: border-box;
 }
 body {
 	margin: 0px;
@@ -139,18 +140,23 @@ header {
 }
 
 menu {
-	width: 1109px;
-	height: 20px;
+	width: 1440px;
+	height: 128px;
 	display: flex;
 	flex-direction: row;
-	justify-content: flex-end;
-	margin: 48px 0px 0px;
-	padding: 0px;
-	background: url('../images/logo.svg') left/128px no-repeat;
+	justify-content: space-between;
+	margin: 0px;
+	padding: 50px 166px 0px 166px;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0) 100%);
 }
 
 #menu > div {
 	height: 20px;
+}
+
+#menu-logo{
+	width: 128px;
+	background: url('../images/logo.svg') center/128px no-repeat;
 }
 
 #menu-hamburger {
