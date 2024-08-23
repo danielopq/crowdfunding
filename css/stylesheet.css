@@ -22,7 +22,10 @@ body {
 h1 {
 	padding: 0px;
 }
-
+p{
+	padding: 0px;
+	margin: 0px;
+}
 input[type="text"] {
 	width: 30px;
 	margin-left: 10px;
@@ -238,7 +241,7 @@ menu {
 }
 
 /*--------------------main--------------------*/
-#main {
+main {
 	width: 730px;
 	height: 1800px;
 	z-index: 1;
@@ -250,7 +253,7 @@ menu {
 
 .main-section {
 	width: inherit;
-	margin-bottom: 25px;
+	margin-bottom: 24px;
 	background-color: white;
 	border: solid 2px #f6f6f6;
 	border-radius: 8px;
@@ -334,34 +337,50 @@ menu {
 }
 
 /*--------------------main-data--------------------*/
-#main-data {
-	height: 240px;
+#data {
+	height: 212px;
 	display: flex;
 	flex-direction: column;
 	align-items: flex-start;
 }
 
-#data-amounts {
-	width: 730px;
-	height: 80px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin-top: 50px;
+#dataDetails{
+	margin-top: 48px;
+	width: inherit;
 }
 
-#data-amounts>div {
-	width: 243px;
-	text-align: left;
+#dataDetails > div{
+	width: 229px;
+	height: 66px;
+	padding-left: 48px;
 }
 
-#data-amounts p {
-	margin-left: 50px;
+.data-numbers {
+	font: 700 32px 'Commissioner'; 
+	color: black;
+	margin-bottom: 8px;
 }
 
-#amounts-total {
-	border-left: solid 2px #f6f6f6;
-	border-right: solid 2px #f6f6f6;
+#totalBackers {
+    position: relative;
+}
+
+#totalBackers::before,#totalBackers::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 63px;
+    border-left: 1px solid #979797; /* Ajusta el grosor y color del borde aquí */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#totalBackers::before {
+    left: 0;
+}
+
+#totalBackers::after {
+    right: 0;
 }
 
 #data-backgroundBar {
@@ -377,13 +396,6 @@ menu {
 	height: inherit;
 	border-radius: 5px;
 	background-color: hsl(176, 50%, 47%);
-}
-
-.data-numbers {
-	font-size: 30px;
-	font-weight: 700;
-	color: black;
-	line-height: 0.1;
 }
 
 /*--------------------main-about--------------------*/
