@@ -399,19 +399,37 @@ main {
 }
 
 /*--------------------main-about--------------------*/
-#main-about {
-	height: 1200px;
+
+#about {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	justify-content: center;
-	margin-bottom: 25px;
+	justify-content: flex-start;
+	padding-top: 48px;
+	margin-bottom: 124px;
 }
 
-#main-about>div {
-	width: 630px;
-	margin-bottom: 25px;
+#about>div {
+	width: 634px;
 }
+
+#about-mainText{
+	height: 269px;
+	margin-bottom: 40px;
+}
+
+#about-mainText p[class="default-title"]{
+	width: inherit;
+	height: 24px;
+}
+
+#about-mainText p[class="default-text"]{
+	width: inherit;
+	height: 210px;
+	line-height: 30px;
+	margin-top: 35px;
+}
+
 
 #mahogany {
 	opacity: 40%;
@@ -423,6 +441,7 @@ main {
 	align-items: center;
 	border: solid 2px #dbdbdb;
 	border-radius: 8px;
+	margin-bottom: 24px;
 }
 
 .item>div {
