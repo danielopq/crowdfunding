@@ -384,17 +384,17 @@ main {
 }
 
 #data-backgroundBar {
-	width: 630px;
-	height: 10px;
-	border-radius: 5px;
+	width: 634px;
+	height: 12px;
+	border-radius:33px;
 	background-color: #f4f4f4;
-	margin: 50px auto 50px 50px;
+	margin: 37px 0px 0px 48px;
 }
 
 #data-progressBar {
-	width: 520px;
+	width: 496px;
 	height: inherit;
-	border-radius: 5px;
+	border-radius: 33px;
 	background-color: hsl(176, 50%, 47%);
 }
 
@@ -737,7 +737,7 @@ main {
 		margin-top: 10px;
 	}
 
-	/*--------------------main-data--------------------*/
+	/*-------------------- data --------------------*/
 	#main-data {
 		height: 430px;
 	}
