@@ -111,14 +111,12 @@ input[type="text"]:focus {
 }
 
 .default-title {
-	font-size: 21px;
-	font-weight: 700;
+	font: 700 20px 'Commissioner';
 	color: black;
 }
 
 .default-text {
-	font-size: 16px;
-	font-weight: 400;
+	font: 400 16px 'Commissioner';
 	color: hsl(0, 0%, 48%);
 }
 
@@ -430,7 +428,6 @@ main {
 	margin-top: 35px;
 }
 
-
 #mahogany {
 	opacity: 40%;
 }
@@ -444,18 +441,18 @@ main {
 	margin-bottom: 24px;
 }
 
-.item>div {
+.item > div {
 	width: 570px;
 }
 
 .item-desc {
-	margin-top: 35px;
+	border: solid 1px red;
+	margin: 38px 0px 24px 0px;
 }
 
 .item-name {
 	float: left;
-	font-size: 21px;
-	font-weight: 700;
+	font: 700 18px 'Commissioner'; 
 	color: black;
 }
 
