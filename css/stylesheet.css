@@ -105,8 +105,8 @@ input[type="text"]:focus {
 }
 
 .reward-bt {
-	width: 160px;
-	height: 60px;
+	width: 157px;
+	height: 48px;
 	float: right;
 }
 
@@ -433,6 +433,7 @@ main {
 }
 
 .item {
+	height: 248px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -471,15 +472,17 @@ main {
 }
 
 .item-units {
-	font-size: 33px;
-	font-weight: 700;
+	font: 700 32px 'Commissioner';
 	color: black;
+	margin-right: 8px;
 }
 
 .item-bottom {
+	height: 48px;
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	margin-top: 24px;
 }
 
 /*--------------------order--------------------*/
