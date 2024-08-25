@@ -3,7 +3,7 @@
 
 /* CSS Document */
 /*--------------------General--------------------*/
-*{
+* {
 	font-family: 'Commissioner';
 	box-sizing: border-box;
 }
@@ -22,10 +22,12 @@ body {
 h1 {
 	padding: 0px;
 }
-p{
+
+p {
 	padding: 0px;
 	margin: 0px;
 }
+
 input[type="text"] {
 	width: 30px;
 	margin-left: 10px;
@@ -267,7 +269,7 @@ main {
 	z-index: 2;
 	position: relative;
 	margin: -30px 0px 0px 0px;
-	background: url('../images/logo-mastercraft.svg') center/56px no-repeat ;
+	background: url('../images/logo-mastercraft.svg') center/56px no-repeat;
 }
 
 #top-text {
@@ -328,7 +330,7 @@ main {
 	color: hsl(176, 72%, 28%);
 }
 
-#top-buttons-bookmark-mb{
+#top-buttons-bookmark-mb {
 	display: none;
 }
 
@@ -340,49 +342,50 @@ main {
 	align-items: flex-start;
 }
 
-#dataDetails{
+#dataDetails {
 	margin-top: 48px;
 	width: inherit;
 }
 
-#dataDetails > div{
+#dataDetails>div {
 	width: 229px;
 	height: 66px;
 	padding-left: 48px;
 }
 
 .data-numbers {
-	font: 700 32px 'Commissioner'; 
+	font: 700 32px 'Commissioner';
 	color: black;
 	margin-bottom: 8px;
 }
 
 #totalBackers {
-    position: relative;
+	position: relative;
 }
 
-#totalBackers::before,#totalBackers::after {
-    content: '';
-    position: absolute;
-    width: 0;
-    height: 63px;
-    border-left: 1px solid #979797;
-    top: 50%;
-    transform: translateY(-50%);
+#totalBackers::before,
+#totalBackers::after {
+	content: '';
+	position: absolute;
+	width: 0;
+	height: 63px;
+	border-left: 1px solid #979797;
+	top: 50%;
+	transform: translateY(-50%);
 }
 
 #totalBackers::before {
-    left: 0;
+	left: 0;
 }
 
 #totalBackers::after {
-    right: 0;
+	right: 0;
 }
 
 #data-backgroundBar {
 	width: 634px;
 	height: 12px;
-	border-radius:33px;
+	border-radius: 33px;
 	background-color: #f4f4f4;
 	margin: 37px 0px 0px 48px;
 }
@@ -409,17 +412,17 @@ main {
 	width: 634px;
 }
 
-#about-mainText{
+#about-mainText {
 	height: 269px;
 	margin-bottom: 40px;
 }
 
-#about-mainText p[class="default-title"]{
+#about-mainText p[class="default-title"] {
 	width: inherit;
 	height: 24px;
 }
 
-#about-mainText p[class="default-text"]{
+#about-mainText p[class="default-text"] {
 	width: inherit;
 	height: 210px;
 	line-height: 30px;
@@ -440,7 +443,7 @@ main {
 	margin-bottom: 24px;
 }
 
-.item > div {
+.item>div {
 	width: 570px;
 }
 
@@ -450,8 +453,12 @@ main {
 
 .item-name {
 	float: left;
-	font: 700 18px 'Commissioner'; 
+	font: 700 18px 'Commissioner';
 	color: black;
+}
+
+.itemMainText {
+	line-height: 30px;
 }
 
 .item-pledge {
