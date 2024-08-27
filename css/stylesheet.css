@@ -281,12 +281,13 @@ main {
 
 #main-title {
 	height: 34px;
-	margin: 0px 0px 15px 0px;
+	margin: 0px 0px 17px 0px;
 	color: black;
 	font: 700 28px 'Commissioner';
 }
 
 #main-text {
+	width: 507px;
 	height: 20px;
 	color: #797979;
 	font: 400 16px 'Commissioner';
@@ -341,14 +342,14 @@ main {
 }
 
 #dataDetails {
-	margin-top: 48px;
+	margin-top: 50px;
 	width: inherit;
 }
 
 #dataDetails>div {
 	width: 229px;
 	height: 66px;
-	padding-left: 48px;
+	padding-left: 50px;
 }
 
 .data-numbers {
