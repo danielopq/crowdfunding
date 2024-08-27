@@ -73,7 +73,6 @@ input[type="text"]:focus {
 }
 
 .button {
-	font: 700 16px 'Commissioner';
 	border-radius: 33px;
 	border: none;
 }
@@ -88,7 +87,6 @@ input[type="text"]:focus {
 }
 
 .enable-button:hover {
-	cursor: pointer;
 	background-color: hsl(176, 72%, 28%);
 }
 
@@ -106,6 +104,7 @@ input[type="text"]:focus {
 	width: 157px;
 	height: 48px;
 	float: right;
+	font: 500 15px/48px 'Commissioner';
 }
 
 .default-title {
@@ -291,7 +290,6 @@ main {
 	height: 20px;
 	color: #797979;
 	font: 400 16px 'Commissioner';
-	margin: 0px;
 }
 
 #top-buttons {
@@ -305,13 +303,13 @@ main {
 #top-buttons-back {
 	width: 204px;
 	height: 56px;
-	line-height: 56px;
+	font: 500 16px/56px 'Commissioner';
 }
 
 #top-buttons-bookmark {
 	width: 174px;
 	height: 56px;
-	line-height: 56px;
+	font: 500 16px/56px 'Commissioner';
 	text-align: left;
 	padding-left: 72px;
 }
@@ -357,6 +355,11 @@ main {
 	font: 700 32px 'Commissioner';
 	color: black;
 	margin-bottom: 8px;
+}
+
+.dataLimit{
+	font: 400 15px 'Commissioner';
+	color: hsl(0, 0%, 48%);
 }
 
 #totalBackers {
@@ -438,7 +441,8 @@ main {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	border: solid 2px #dbdbdb;
+	border: solid 1px;
+	border-color: rgba(0,0,0,0.15);
 	border-radius: 8px;
 	margin-bottom: 24px;
 }
@@ -463,8 +467,7 @@ main {
 
 .item-pledge {
 	float: right;
-	font-size: 16px;
-	font-weight: 500;
+	font: 500 15px 'Commissioner';
 	color: hsl(176, 50%, 47%);
 }
 
