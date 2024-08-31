@@ -1,7 +1,6 @@
 // JavaScript Document
-window.onload = start;
-/*------------------- start -------------------*/
-function start() {
+
+(()=>{
 	document.getElementById("menu-hamburger").addEventListener('click', showMobileMenu, false);
 	document.getElementById("mobile-close").addEventListener('click', hideMobileMenu, false);
 	document.getElementById("top-buttons-back").addEventListener('click', openOrder, false);
@@ -23,9 +22,11 @@ function start() {
 	document.getElementById("bamboo-inp").addEventListener('keyup', validateNumber, false);
 	document.getElementById("black-inp").addEventListener('keyup', validateNumber, false);
 	document.getElementById("mahogany-inp").addEventListener('keyup', validateNumber, false);
-}
+})()
 
-/*------------------- showMobileMenu -------------------*/
+/**
+ * Displays the mobile menu.
+ */
 
 function showMobileMenu() {
 	document.getElementById("menu-mobile").style.display = "flex";
@@ -33,7 +34,9 @@ function showMobileMenu() {
 	document.getElementById("menu-hamburger").style.display = "none";
 }
 
-/*------------------- hideMobileMenu -------------------*/
+/**
+ * Hides the mobile menu
+ */
 
 function hideMobileMenu() {
 	document.getElementById("menu-mobile").style.display = "none";
@@ -44,18 +47,14 @@ function hideMobileMenu() {
 /*------------------- bookmark -------------------*/
 
 function bookmark() {
-	var displayState = window.getComputedStyle(document.getElementById("bt-bookmark-text"), null).getPropertyValue("display");
+	// let displayState = window.getComputedStyle(document.getElementById("bt-bookmark-text"), null).getPropertyValue("display");
 
-	if (document.getElementById("top-buttons-bookmark").attributes["class"].value == "bookmark button") {
+	if (document.getElementById("top-buttons-bookmark").attributes["class"].value == "button bookmark") {
 		document.getElementById("top-buttons-bookmark").setAttribute("class", "bookmarked button");
-		if (displayState == "flex") {
-			document.getElementById("top-buttons-bookmark").innerHTML = "&emsp;&emsp;Bookmark";
-		}
+		document.getElementById("top-buttons-bookmark").innerHTML = "Bookmarked";
 	} else {
-		document.getElementById("top-buttons-bookmark").setAttribute("class", "bookmark button");
-		if (displayState == "flex") {
-			document.getElementById("top-buttons-bookmark").innerHTML = "&emsp;&emsp;Bookmarked";
-		}
+		document.getElementById("top-buttons-bookmark").setAttribute("class", "button bookmark");
+		document.getElementById("top-buttons-bookmark").innerHTML = "Bookmark";
 	}
 }
 
@@ -90,23 +89,23 @@ function openOrder(event) {
 /*------------------- resetPledges -------------------*/
 
 function resetPledges() {
-	var pledges = document.getElementsByClassName("pledge");
-	var radioButtons = document.getElementsByClassName("item-rad");
-	var orderTypes = document.getElementsByClassName("backPro-parag item");
+	let pledges = document.getElementsByClassName("pledge");
+	let radioButtons = document.getElementsByClassName("item-rad");
+	let orderTypes = document.getElementsByClassName("backPro-parag item");
 
 	document.getElementById("noPledge-inp").value = "0";
 	document.getElementById("bamboo-inp").value = "25";
 	document.getElementById("black-inp").value = "75";
 	document.getElementById("mahogany-inp").value = "200";
 
-	for(var indexOrder = 0; indexOrder < orderTypes.length;indexOrder ++){
+	for(let indexOrder = 0; indexOrder < orderTypes.length;indexOrder ++){
 		orderTypes[indexOrder].style.borderColor = "#dbdbdb";
 	}
-	for (var indexRad = 0; indexRad < radioButtons.length; indexRad++) {
+	for (let indexRad = 0; indexRad < radioButtons.length; indexRad++) {
 		radioButtons[indexRad].checked = false;
 	}
 
-	for (var index = 0; index < pledges.length; index++) {
+	for (let index = 0; index < pledges.length; index++) {
 		pledges[index].style.display = "none";
 	}
 }
@@ -160,9 +159,9 @@ function closeOrder() {
 /*------------------- validateAmount -------------------*/
 
 function validateNumber(event) {
-	var sourceID = event.target.attributes["id"].value;
-	var pledgeAmount = event.target.value;
-	var pattern = /[0-9]/;
+	let sourceID = event.target.attributes["id"].value;
+	let pledgeAmount = event.target.value;
+	let pattern = /[0-9]/;
 
 	if (!event.key.match(pattern) && event.key.length == 1) {
 		document.getElementById(sourceID).value = pledgeAmount.substring(0, pledgeAmount.length - 1);
@@ -175,7 +174,7 @@ function validateNumber(event) {
 
 
 function validatePledge(source) {
-	var rightAmount = false;
+	let rightAmount = false;
 	switch (source) {
 		case 'noPledge-continue':
 			rightAmount = true;

@@ -272,6 +272,7 @@ main {
 }
 
 #top-text {
+	height: 69px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -308,7 +309,6 @@ main {
 }
 
 #top-buttons-bookmark {
-	width: 174px;
 	height: 56px;
 	font: 500 16px/56px 'Commissioner';
 	text-align: left;
@@ -320,11 +320,13 @@ main {
 }
 
 .bookmark {
+	width: 174px;
 	background: #f4f4f4 url("../images/icon-bookmark.svg") left/56px no-repeat;
 	color: #727272;
 }
 
 .bookmarked {
+	width: 190px;
 	background: #f4f4f4 url("../images/icon-bookmarked.svg") left/56px no-repeat;
 	color: hsl(176, 72%, 28%);
 }
@@ -404,7 +406,6 @@ main {
 /*--------------------main-about--------------------*/
 
 #about {
-	border: solid 1px red;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
