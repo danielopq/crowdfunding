@@ -342,14 +342,14 @@ main {
 }
 
 #dataDetails {
-	margin-top: 50px;
+	margin-top: 48px;
 	width: inherit;
 }
 
 #dataDetails>div {
 	width: 229px;
 	height: 66px;
-	padding-left: 50px;
+	padding-left: 48px;
 }
 
 .data-numbers {
@@ -404,11 +404,12 @@ main {
 /*--------------------main-about--------------------*/
 
 #about {
+	border: solid 1px red;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	padding-top: 48px;
+	padding: 48px 0px 48px 0px;
 	margin-bottom: 124px;
 }
 
