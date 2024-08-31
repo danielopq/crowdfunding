@@ -1,34 +1,12 @@
 // JavaScript Document
 
-(()=>{
-	document.getElementById("menu-hamburger").addEventListener('click', showMobileMenu, false);
-	document.getElementById("mobile-close").addEventListener('click', hideMobileMenu, false);
-	document.getElementById("top-buttons-back").addEventListener('click', openOrder, false);
-	document.getElementById("bamboo-reward-bt").addEventListener('click', openOrder, false);
-	document.getElementById("black-reward-bt").addEventListener('click', openOrder, false);
-	document.getElementById("mahogany-reward-bt").addEventListener('click', openOrder, false);
-	document.getElementById("top-buttons-bookmark").addEventListener('click', bookmark, false);
-	document.getElementById("backProject-close").addEventListener('click', closeOrder, false);
-	document.getElementById("noPledge-bt").addEventListener('click', selectItem, false);
-	document.getElementById("bamboo-bt").addEventListener('click', selectItem, false);
-	document.getElementById("black-bt").addEventListener('click', selectItem, false);
-	document.getElementById("mahogany-bt").addEventListener('click', selectItem, false);
-	document.getElementById("noPledge-continue").addEventListener('click', sendOrder, false);
-	document.getElementById("bamboo-continue").addEventListener('click', sendOrder, false);
-	document.getElementById("black-continue").addEventListener('click', sendOrder, false);
-	document.getElementById("mahogany-continue").addEventListener('click', sendOrder, false);
-	document.getElementById("gotIt-bt").addEventListener('click', closeOrder, false);
-	document.getElementById("noPledge-inp").addEventListener('keyup', validateNumber, false);
-	document.getElementById("bamboo-inp").addEventListener('keyup', validateNumber, false);
-	document.getElementById("black-inp").addEventListener('keyup', validateNumber, false);
-	document.getElementById("mahogany-inp").addEventListener('keyup', validateNumber, false);
-})()
+
 
 /**
  * Displays the mobile menu.
  */
 
-function showMobileMenu() {
+const showMobileMenu = () => {
 	document.getElementById("menu-mobile").style.display = "flex";
 	document.getElementById("menu-logo").style.display = "none";
 	document.getElementById("menu-hamburger").style.display = "none";
@@ -38,7 +16,7 @@ function showMobileMenu() {
  * Hides the mobile menu
  */
 
-function hideMobileMenu() {
+const hideMobileMenu = () => {
 	document.getElementById("menu-mobile").style.display = "none";
 	document.getElementById("menu-logo").style.display = "flex";
 	document.getElementById("menu-hamburger").style.display = "flex";
@@ -48,7 +26,7 @@ function hideMobileMenu() {
  * Modifies the bookmark button's state.
  */
 
-function bookmark() {
+const bookmark = () => {
 	if (document.getElementById("top-buttons-bookmark").attributes["class"].value == "button bookmark") {
 		document.getElementById("top-buttons-bookmark").setAttribute("class", "bookmarked button");
 		document.getElementById("top-buttons-bookmark").innerHTML = "Bookmarked";
@@ -63,7 +41,7 @@ function bookmark() {
  * @param {Event} event 
  */
 
-function openOrder(event) {
+const openOrder = (event) =>{
 	resetPledges();
 	document.getElementById("order").style.display = "flex";
 	document.getElementById("backProject").style.display = "flex";
@@ -94,17 +72,17 @@ function openOrder(event) {
  * resets order border colors, and hides pledges.
  */
 
-function resetPledges() {
+const resetPledges = () => {
 	let orderTypes = document.getElementsByClassName("backPro-parag item");
 	let radioButtons = document.getElementsByClassName("item-rad");
 	let pledges = document.getElementsByClassName("pledge");
-	
+
 	document.getElementById("noPledge-inp").value = "0";
 	document.getElementById("bamboo-inp").value = "25";
 	document.getElementById("black-inp").value = "75";
 	document.getElementById("mahogany-inp").value = "200";
 
-	for(let indexOrder = 0; indexOrder < orderTypes.length;indexOrder ++){
+	for (let indexOrder = 0; indexOrder < orderTypes.length; indexOrder++) {
 		orderTypes[indexOrder].style.borderColor = "#dbdbdb";
 	}
 	for (let indexRad = 0; indexRad < radioButtons.length; indexRad++) {
@@ -121,7 +99,7 @@ function resetPledges() {
  * @param {Event} event 
  */
 
-function selectItem(event) {
+const selectItem = (event) => {
 	resetPledges();
 	if (event.target.attributes["class"].value.indexOf("inStock") != -1) {
 		switch (event.target.attributes["id"].value) {
@@ -153,7 +131,7 @@ function selectItem(event) {
  * Displays a thank you window.
  * @param {Event} event 
  */
-function sendOrder(event) {
+const sendOrder = (event) => {
 	if (validatePledge(event.target.attributes["id"].value)) {
 		document.getElementById("orderCompleted").style.display = "flex";
 		document.getElementById("backProject").style.display = "none";
@@ -164,7 +142,7 @@ function sendOrder(event) {
  * Closes the order window.
  */
 
-function closeOrder() {
+const closeOrder = () => {
 	document.getElementById("order").style.display = "none";
 	document.getElementById("backProject").style.display = "none";
 	document.getElementById("orderCompleted").style.display = "none";
@@ -176,7 +154,7 @@ function closeOrder() {
  * @param {Event} event 
  */
 
-function validateNumber(event) {
+const validateNumber = (event) => {
 	let sourceID = event.target.attributes["id"].value;
 	let pledgeAmount = event.target.value;
 	let pattern = /[0-9]/;
@@ -195,7 +173,7 @@ function validateNumber(event) {
  * @param {String} source 
  * @returns {Boolean}
  */
-function validatePledge(source) {
+const validatePledge = (source) => {
 	let rightAmount = false;
 	switch (source) {
 		case 'noPledge-continue':
@@ -225,3 +203,27 @@ function validatePledge(source) {
 	}
 	return rightAmount;
 }
+
+(() => {
+	document.getElementById("menu-hamburger").addEventListener('click', showMobileMenu, false);
+	document.getElementById("mobile-close").addEventListener('click', hideMobileMenu, false);
+	document.getElementById("top-buttons-back").addEventListener('click', openOrder, false);
+	document.getElementById("bamboo-reward-bt").addEventListener('click', openOrder, false);
+	document.getElementById("black-reward-bt").addEventListener('click', openOrder, false);
+	document.getElementById("mahogany-reward-bt").addEventListener('click', openOrder, false);
+	document.getElementById("top-buttons-bookmark").addEventListener('click', bookmark, false);
+	document.getElementById("backProject-close").addEventListener('click', closeOrder, false);
+	document.getElementById("noPledge-bt").addEventListener('click', selectItem, false);
+	document.getElementById("bamboo-bt").addEventListener('click', selectItem, false);
+	document.getElementById("black-bt").addEventListener('click', selectItem, false);
+	document.getElementById("mahogany-bt").addEventListener('click', selectItem, false);
+	document.getElementById("noPledge-continue").addEventListener('click', sendOrder, false);
+	document.getElementById("bamboo-continue").addEventListener('click', sendOrder, false);
+	document.getElementById("black-continue").addEventListener('click', sendOrder, false);
+	document.getElementById("mahogany-continue").addEventListener('click', sendOrder, false);
+	document.getElementById("gotIt-bt").addEventListener('click', closeOrder, false);
+	document.getElementById("noPledge-inp").addEventListener('keyup', validateNumber, false);
+	document.getElementById("bamboo-inp").addEventListener('keyup', validateNumber, false);
+	document.getElementById("black-inp").addEventListener('keyup', validateNumber, false);
+	document.getElementById("mahogany-inp").addEventListener('keyup', validateNumber, false);
+})()
