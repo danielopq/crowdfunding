@@ -60,7 +60,7 @@ function bookmark() {
 
 /**
  * Opens the order window dialog.
- * @param {EventSource} event 
+ * @param {Event} event 
  */
 
 function openOrder(event) {
@@ -116,7 +116,10 @@ function resetPledges() {
 	}
 }
 
-/*------------------- selectItem -------------------*/
+/**
+ * Selects a product by enabling pledges and changing the border color.
+ * @param {Event} event 
+ */
 
 function selectItem(event) {
 	resetPledges();
@@ -146,7 +149,10 @@ function selectItem(event) {
 	}
 }
 
-/*------------------- sendOrder -------------------*/
+/**
+ * Displays a thank you window.
+ * @param {Event} event 
+ */
 function sendOrder(event) {
 	if (validatePledge(event.target.attributes["id"].value)) {
 		document.getElementById("orderCompleted").style.display = "flex";
@@ -154,7 +160,9 @@ function sendOrder(event) {
 	}
 }
 
-/*------------------- closeOrder -------------------*/
+/**
+ * Closes the order window.
+ */
 
 function closeOrder() {
 	document.getElementById("order").style.display = "none";
@@ -162,7 +170,11 @@ function closeOrder() {
 	document.getElementById("orderCompleted").style.display = "none";
 }
 
-/*------------------- validateAmount -------------------*/
+/**
+ * Validates pledge values by ensuring that the text field contains only numbers,
+ * is not empty, and does not have a leading zero.
+ * @param {Event} event 
+ */
 
 function validateNumber(event) {
 	let sourceID = event.target.attributes["id"].value;
@@ -178,7 +190,11 @@ function validateNumber(event) {
 	}
 }
 
-
+/**
+ * Corrects pledge values according to the minimums.
+ * @param {String} source 
+ * @returns {Boolean}
+ */
 function validatePledge(source) {
 	let rightAmount = false;
 	switch (source) {
