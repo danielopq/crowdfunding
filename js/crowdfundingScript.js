@@ -44,11 +44,11 @@ function hideMobileMenu() {
 	document.getElementById("menu-hamburger").style.display = "flex";
 }
 
-/*------------------- bookmark -------------------*/
+/**
+ * Modifies the bookmark button's state.
+ */
 
 function bookmark() {
-	// let displayState = window.getComputedStyle(document.getElementById("bt-bookmark-text"), null).getPropertyValue("display");
-
 	if (document.getElementById("top-buttons-bookmark").attributes["class"].value == "button bookmark") {
 		document.getElementById("top-buttons-bookmark").setAttribute("class", "bookmarked button");
 		document.getElementById("top-buttons-bookmark").innerHTML = "Bookmarked";
@@ -58,7 +58,10 @@ function bookmark() {
 	}
 }
 
-/*------------------- openOrder -------------------*/
+/**
+ * Opens the order window dialog.
+ * @param {EventSource} event 
+ */
 
 function openOrder(event) {
 	resetPledges();
@@ -86,13 +89,16 @@ function openOrder(event) {
 	}
 }
 
-/*------------------- resetPledges -------------------*/
+/**
+ * Resets pledge values to the initial ones, unchecks radio buttons,
+ * resets order border colors, and hides pledges.
+ */
 
 function resetPledges() {
-	let pledges = document.getElementsByClassName("pledge");
-	let radioButtons = document.getElementsByClassName("item-rad");
 	let orderTypes = document.getElementsByClassName("backPro-parag item");
-
+	let radioButtons = document.getElementsByClassName("item-rad");
+	let pledges = document.getElementsByClassName("pledge");
+	
 	document.getElementById("noPledge-inp").value = "0";
 	document.getElementById("bamboo-inp").value = "25";
 	document.getElementById("black-inp").value = "75";

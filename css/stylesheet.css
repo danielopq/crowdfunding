@@ -96,15 +96,16 @@ input[type="text"]:focus {
 }
 
 .continue-bt {
-	width: 105px;
-	height: 45px;
+	width: 107px;
+	height: 48px;
+	font: 700 14px/48px 'Commissioner';
 }
 
 .reward-bt {
 	width: 157px;
 	height: 48px;
 	float: right;
-	font: 500 15px/48px 'Commissioner';
+	font: 700 14px/48px 'Commissioner';
 }
 
 .default-title {
@@ -305,12 +306,12 @@ main {
 #top-buttons-back {
 	width: 204px;
 	height: 56px;
-	font: 500 16px/56px 'Commissioner';
+	font: 700 16px/56px 'Commissioner';
 }
 
 #top-buttons-bookmark {
 	height: 56px;
-	font: 500 16px/56px 'Commissioner';
+	font: 700 16px/56px 'Commissioner';
 	text-align: left;
 	padding-left: 72px;
 }
@@ -344,14 +345,14 @@ main {
 }
 
 #dataDetails {
-	margin-top: 48px;
+	margin-top: 46px;
 	width: inherit;
 }
 
 #dataDetails>div {
 	width: 229px;
 	height: 66px;
-	padding-left: 48px;
+	padding-left: 46px;
 }
 
 .data-numbers {
@@ -406,12 +407,12 @@ main {
 /*--------------------main-about--------------------*/
 
 #about {
+	height: 1197px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	padding: 48px 0px 48px 0px;
-	margin-bottom: 124px;
+	padding-top: 48px;
 }
 
 #about>div {
