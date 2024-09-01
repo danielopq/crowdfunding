@@ -60,18 +60,6 @@ input[type="text"]:focus {
 	opacity: 0.6;
 }
 
-.section-mb-bt {
-	margin-left: 25px;
-	color: black;
-	font-size: 18px;
-	font-weight: 500;
-}
-
-.section-mb-bt:hover {
-	cursor: pointer;
-	opacity: 0.6;
-}
-
 .button {
 	border-radius: 33px;
 	border: none;
@@ -187,40 +175,43 @@ menu {
 }
 
 #menu-mobile {
+	width: 100vw;
 	display: none;
 	flex-direction: column;
 	align-items: center;
+	padding-top: 32px;
 }
 
 #menu-mobile-top {
-	width: 430px;
+	width: 326px;
 	height: 20px;
-	margin-top: 30px;
-	overflow: hidden;
 }
 
 #mobile-close {
 	float: right;
 	width: 20px;
-	height: 20px;
+	height: inherit;
 	background: url("../images/icon-close-menu.svg") center/14px no-repeat;
 }
 
 #mobile-logo {
+	width: 128px;
+	height: inherit;
+	background: url("../images/logo.svg") center/128px no-repeat;
 	float: left;
 }
 
 #mobile-links {
 	position: absolute;
 	z-index: 500;
-	width: 430px;
-	height: 210px;
+	width: 326px;
+	height: 212x;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
 	background-color: white;
-	border-radius: 5px;
-	top: 90px;
+	border-radius: 8px;
+	top: 88px;
 }
 
 #mobile-links div {
@@ -229,6 +220,17 @@ menu {
 	width: inherit;
 	height: 70px;
 	text-align: left;
+}
+
+.section-mb-bt {
+	margin-left: 24px;
+	color: black;
+	font: 500 18px 'Commissioner';
+}
+
+.section-mb-bt:hover {
+	cursor: pointer;
+	opacity: 0.6;
 }
 
 #mb-discover {
@@ -293,6 +295,7 @@ main {
 	height: 20px;
 	color: #797979;
 	font: 400 16px 'Commissioner';
+	letter-spacing: 0px;
 }
 
 #top-buttons {
@@ -467,7 +470,7 @@ main {
 .item-name {
 	height: inherit;
 	float: left;
-	font: 700 18px 'Commissioner';
+	font: 700 18px/18px 'Commissioner';
 	color: black;
 }
 
@@ -726,20 +729,20 @@ main {
 
 @media screen and (max-width: 480px) {
 	body {
-		height: 2000px;
+		height: 100%;
 	}
 
 	/*--------------------header--------------------*/
 	header {
-		width: 480px;
-		height: 320px;
-		background: url("../images/image-hero-mobile.jpg") bottom/100% no-repeat;
+		width: 100vw;
+		height: 300px;
+		background: url("../images/image-hero-mobile.jpg") center/100vw no-repeat;
 	}
 
 	#menu {
-		width: 430px;
-		height: 20px;
-		margin-top: 30px;
+		width: 100vw;
+		height: 128px;
+		padding: 32px 24px 0px 24px;
 	}
 
 	#menu-hamburger {
@@ -749,6 +752,70 @@ main {
 	#menu-links {
 		display: none;
 	}
+
+
+
+
+
+/* 
+
+	#menu-mobile {
+		display: none;
+		flex-direction: column;
+		align-items: center;
+	}
+	
+	#menu-mobile-top {
+		width: 430px;
+		height: 20px;
+		margin-top: 30px;
+		overflow: hidden;
+	}
+	
+	#mobile-close {
+		float: right;
+		width: 20px;
+		height: 20px;
+		background: url("../images/icon-close-menu.svg") center/14px no-repeat;
+	}
+	
+	#mobile-logo {
+		float: left;
+	}
+	
+	#mobile-links {
+		position: absolute;
+		z-index: 500;
+		width: 430px;
+		height: 210px;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		background-color: white;
+		border-radius: 5px;
+		top: 90px;
+	}
+	
+	#mobile-links div {
+		display: flex;
+		align-items: center;
+		width: inherit;
+		height: 70px;
+		text-align: left;
+	}
+	
+	#mb-discover {
+		border-top: solid 1px black;
+		border-bottom: solid 1px black;
+	} */
+
+
+
+
+
+
+
+
 
 	/*--------------------main--------------------*/
 	#main {
