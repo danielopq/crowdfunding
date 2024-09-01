@@ -109,7 +109,7 @@ input[type="text"]:focus {
 }
 
 .default-title {
-	font: 700 20px 'Commissioner';
+	font: 700 20px/24px 'Commissioner';
 	color: black;
 }
 
@@ -456,6 +456,7 @@ main {
 }
 
 .item-desc {
+	height: 22px;
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -464,6 +465,7 @@ main {
 }
 
 .item-name {
+	height: inherit;
 	float: left;
 	font: 700 18px 'Commissioner';
 	color: black;
@@ -476,7 +478,6 @@ main {
 }
 
 .item-pledge {
-	float: right;
 	font: 500 15px 'Commissioner';
 	color: hsl(176, 50%, 47%);
 }
@@ -525,6 +526,10 @@ main {
 
 #backProject-close {
 	width: inherit;
+}
+
+#backProject-header p[class="default-text"]{
+	margin-top: 16px;
 }
 
 #back-Mahogany {
