@@ -121,6 +121,10 @@ input[type="text"]:focus {
 	height: 2120px;
 }
 
+.left-text{
+	font: 400 15px 'Commissioner';
+	color: hsl(0, 0%, 48%);
+}
 /*--------------------header--------------------*/
 header {
 	display: flex;
@@ -153,7 +157,7 @@ menu {
 #menu-hamburger {
 	display: none;
 	width: 20px;
-	background: url("../images/icon-hamburger.svg") center 100% no-repeat;
+	background: url("../images/icon-hamburger.svg") center/14px no-repeat;
 }
 
 #menu-links {
@@ -736,12 +740,12 @@ main {
 	header {
 		width: 100vw;
 		height: 300px;
-		background: url("../images/image-hero-mobile.jpg") center/100vw no-repeat;
+		background: url("../images/image-hero-mobile.jpg") center/cover no-repeat;
 	}
 
-	#menu {
-		width: 100vw;
-		height: 128px;
+	menu {
+		width: 100vw;;
+		height: 300px;
 		padding: 32px 24px 0px 24px;
 	}
 
