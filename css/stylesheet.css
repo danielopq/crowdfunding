@@ -350,7 +350,7 @@ main {
 }
 
 #dataDetails>div {
-	width: 229px;
+	width: 228px;
 	height: 66px;
 	padding-left: 46px;
 }
@@ -394,7 +394,7 @@ main {
 	height: 12px;
 	border-radius: 33px;
 	background-color: #f4f4f4;
-	margin: 37px 0px 0px 48px;
+	margin: 37px 0px 0px 46px;
 }
 
 #data-progressBar {
@@ -456,6 +456,10 @@ main {
 }
 
 .item-desc {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-content: center;
 	margin: 38px 0px 24px 0px;
 }
 
