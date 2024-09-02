@@ -369,8 +369,12 @@ main {
 }
 
 #dataDetails {
-	margin-top: 46px;
 	width: inherit;
+	display: flex;
+	flex-direction: row;
+	justify-content: flex-start;
+	align-items: center;
+	margin-top: 46px;
 }
 
 #dataDetails>div {
@@ -400,6 +404,7 @@ main {
 	position: absolute;
 	width: 0;
 	height: 63px;
+	background-color: #979797;
 	border-left: 1px solid #979797;
 	top: 50%;
 	transform: translateY(-50%);
@@ -412,6 +417,7 @@ main {
 #totalBackers::after {
 	right: 0;
 }
+
 
 #data-backgroundBar {
 	width: 634px;
@@ -827,130 +833,61 @@ main {
 	/*-------------------- data --------------------*/
 
 	#data {
-		height: 212px;
-		display: none;
+		height: 412px;
 		flex-direction: column;
-		align-items: flex-start;
+		align-items: center;
+
 	}
 
-	#data-amounts {
-		width: 430px;
-		height: 310px;
-		flex-direction: column;
-		margin-top: 20px;
-	}
-
-	#data-amounts>div {
-		width: 130px;
-		text-align: center;
-	}
-
-	#data-amounts p {
-		margin-left: 0px;
-	}
-
-	#amounts-total {
-		border-left: none;
-		border-right: none;
-		border-top: solid 2px #f6f6f6;
-		border-bottom: solid 2px #f6f6f6;
-	}
-
-	#data-backgroundBar {
-		width: 380px;
-		margin: auto;
-	}
-
-	#data-progressBar {
-		width: 285px;
-	}
-
-	.data-numbers {
-		font-size: 30px;
-		font-weight: 700;
-		color: black;
-		line-height: 0.1;
-	}
-
-
-	/* 
-	
 	#dataDetails {
-		margin-top: 46px;
-		width: inherit;
+		width: 129px;
+		height: 296px;
+		flex-direction: column;
+		justify-content:center;
+		align-items: center;
+		margin-top: 16px;
 	}
 	
 	#dataDetails>div {
-		width: 228px;
-		height: 66px;
-		padding-left: 46px;
+		width: inherit;
+		height: 116px;
+		padding: 0px;
+		text-align: center;
+		padding-top: 12px;
 	}
-	
-	.data-numbers {
-		font: 700 32px 'Commissioner';
-		color: black;
-		margin-bottom: 8px;
-	}
-	
+ 
 	.dataLimit{
-		font: 400 15px 'Commissioner';
-		color: hsl(0, 0%, 48%);
+		font: 400 14px 'Commissioner';
 	}
-	
-	#totalBackers {
-		position: relative;
-	}
-	
+
 	#totalBackers::before,
 	#totalBackers::after {
-		content: '';
-		position: absolute;
-		width: 0;
-		height: 63px;
-		border-left: 1px solid #979797;
-		top: 50%;
-		transform: translateY(-50%);
+		width: 80px;
+		height: 0;
+		border-left: none; /* Quitamos el borde izquierdo */
+		border-top: 1px solid #979797; /* Agregamos el borde superior */
+		top: auto;
+		transform: translateX(-50%);
 	}
-	
+
 	#totalBackers::before {
-		left: 0;
+		top: 0; /* Borde superior */
+		left: 50%;
 	}
-	
+
 	#totalBackers::after {
-		right: 0;
+		bottom: 0; /* Borde inferior */
+		left: 50%;
 	}
-	
+
 	#data-backgroundBar {
-		width: 634px;
-		height: 12px;
-		border-radius: 33px;
-		background-color: #f4f4f4;
-		margin: 37px 0px 0px 46px;
+		width: 279px;
+		margin: 32px 0px 0px 0px;
 	}
 	
 	#data-progressBar {
-		width: 496px;
-		height: inherit;
-		border-radius: 33px;
-		background-color: hsl(176, 50%, 47%);
-	} */
-	
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+		width: 218px;
+	}
 
 	/*--------------------main-about--------------------*/
 	#main-about {
@@ -990,114 +927,6 @@ main {
 	.reward-bt {
 		margin: 20px 0px 20px 0px;
 	}
-
-
-
-
-
-	/* #about {
-		height: 1197px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		justify-content: flex-start;
-		padding-top: 48px;
-	}
-	
-	#about>div {
-		width: 634px;
-	}
-	
-	#about-mainText {
-		height: 269px;
-		margin-bottom: 40px;
-	}
-	
-	#about-mainText p[class="default-title"] {
-		width: inherit;
-		height: 24px;
-	}
-	
-	#about-mainText p[class="default-text"] {
-		width: inherit;
-		height: 210px;
-		line-height: 30px;
-		margin-top: 35px;
-	}
-	
-	#mahogany {
-		opacity: 40%;
-	}
-	
-	.item {
-		height: 248px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		border: solid 1px;
-		border-color: rgba(0,0,0,0.15);
-		border-radius: 8px;
-		margin-bottom: 24px;
-	}
-	
-	.item>div {
-		width: 570px;
-	}
-	
-	.item-desc {
-		height: 22px;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-content: center;
-		margin: 38px 0px 22px 0px;
-	}
-	
-	.item-name {
-		height: inherit;
-		float: left;
-		font: 700 18px/18px 'Commissioner';
-		color: black;
-	}
-	
-	.itemMainText {
-		width: inherit;
-		height: 60px;
-		line-height: 30px;
-	}
-	
-	.item-pledge {
-		font: 500 15px 'Commissioner';
-		color: hsl(176, 50%, 47%);
-	}
-	
-	.item-stock {
-		width: 410px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
-	
-	.item-units {
-		font: 700 32px 'Commissioner';
-		color: black;
-		margin-right: 8px;
-	}
-	
-	.item-bottom {
-		height: 48px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		margin-top: 24px;
-	} */
-
-
-
-
-
-
-
 
 	/*--------------------order--------------------*/
 	.overlap {
