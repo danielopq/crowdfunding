@@ -249,6 +249,7 @@ main {
 	position: absolute;
 	display: flex;
 	flex-direction: column;
+	align-items: center;
 	margin-top: 308px;
 }
 
@@ -279,6 +280,7 @@ main {
 }
 
 #top-text {
+	width: 507px;
 	height: 69px;
 	display: flex;
 	flex-direction: column;
@@ -288,6 +290,7 @@ main {
 }
 
 #main-title {
+	width: inherit;
 	height: 34px;
 	margin: 0px 0px 17px 0px;
 	color: black;
@@ -295,7 +298,7 @@ main {
 }
 
 #main-text {
-	width: 507px;
+	width: inherit;
 	height: 20px;
 	color: #797979;
 	font: 400 16px 'Commissioner';
@@ -340,6 +343,12 @@ main {
 }
 
 #top-buttons-bookmark-mb {
+	width: 56px;
+	height: 56px;
+	border-radius: 33px;
+	border: none;
+	cursor: pointer;
+	background: url("../images/icon-bookmark.svg") center/56px no-repeat;
 	display: none;
 }
 
@@ -757,101 +766,63 @@ main {
 		display: none;
 	}
 
-
-
-
-
-/* 
-
-	#menu-mobile {
-		display: none;
-		flex-direction: column;
-		align-items: center;
-	}
-	
-	#menu-mobile-top {
-		width: 430px;
-		height: 20px;
-		margin-top: 30px;
-		overflow: hidden;
-	}
-	
-	#mobile-close {
-		float: right;
-		width: 20px;
-		height: 20px;
-		background: url("../images/icon-close-menu.svg") center/14px no-repeat;
-	}
-	
-	#mobile-logo {
-		float: left;
-	}
-	
-	#mobile-links {
-		position: absolute;
-		z-index: 500;
-		width: 430px;
-		height: 210px;
-		display: flex;
-		flex-direction: column;
-		align-items: center;
-		background-color: white;
-		border-radius: 5px;
-		top: 90px;
-	}
-	
-	#mobile-links div {
-		display: flex;
-		align-items: center;
-		width: inherit;
-		height: 70px;
-		text-align: left;
-	}
-	
-	#mb-discover {
-		border-top: solid 1px black;
-		border-bottom: solid 1px black;
-	} */
-
-
-
-
-
-
-
-
-
 	/*--------------------main--------------------*/
-	#main {
-		width: 430px;
-		height: 2340px;
-		margin-top: 255px;
+
+	main {
+		display: flex;
+		width: 100vw;
+		height: 100%;
+		margin-top: 245px;
 	}
 
-	/*--------------------main-top--------------------*/
 	#main-top {
-		height: 290px;
+		width: 327px;
+		height: 284px;
 	}
 
-	#top-logo {
-		margin-bottom: 0px;
+	.main-section {
+		width: 327px;
 	}
 
 	#top-text {
-		display: flex;
-		flex-direction: column;
-		align-items: center;
+		width: 280px;
+		height: 112px;
+		margin-top: 24px;
+		
+	}
+
+	#main-title {
+		height: 48px;
+		padding: 0px 20px 0px 20px;
+		font: 700 20px 'Commissioner';
+	}
+
+	#main-text {
+		height: 48px;
+		font: 400 14px/24px 'Commissioner';
 	}
 
 	#top-buttons {
-		width: 380px;
-		height: 70px;
-		margin-top: 10px;
+		width: 279px;
+		height: 56px;
+		margin-top: 24px;
+	}
+
+	#top-buttons-bookmark {
+		display: none;
+	}
+
+	#top-buttons-bookmark-mb{
+		display: block;
 	}
 
 	/*-------------------- data --------------------*/
-	#main-data {
-		height: 430px;
+
+	#data {
+		height: 212px;
+		display: none;
+		flex-direction: column;
+		align-items: flex-start;
 	}
 
 	#data-amounts {
@@ -1024,4 +995,12 @@ main {
 		left: 50%;
 		transform: translate(-50%, 0%);
 	}
+
+/**TODO */
+
+	#about {
+		display: none; 
+	}
+
+
 }
