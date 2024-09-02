@@ -28,10 +28,12 @@ const hideMobileMenu = () => {
 
 const bookmark = () => {
 	if (document.getElementById("top-buttons-bookmark").attributes["class"].value == "button bookmark") {
-		document.getElementById("top-buttons-bookmark").setAttribute("class", "bookmarked button");
+		document.getElementById("top-buttons-bookmark").setAttribute("class", "button bookmarked");
+		document.getElementById("top-buttons-bookmark-mb").setAttribute("class", "mb-bookmarked");
 		document.getElementById("top-buttons-bookmark").innerHTML = "Bookmarked";
 	} else {
 		document.getElementById("top-buttons-bookmark").setAttribute("class", "button bookmark");
+		document.getElementById("top-buttons-bookmark-mb").setAttribute("class", "mb-bookmark");
 		document.getElementById("top-buttons-bookmark").innerHTML = "Bookmark";
 	}
 }
@@ -212,6 +214,7 @@ const validatePledge = (source) => {
 	document.getElementById("black-reward-bt").addEventListener('click', openOrder, false);
 	document.getElementById("mahogany-reward-bt").addEventListener('click', openOrder, false);
 	document.getElementById("top-buttons-bookmark").addEventListener('click', bookmark, false);
+	document.getElementById("top-buttons-bookmark-mb").addEventListener('click', bookmark, false);
 	document.getElementById("backProject-close").addEventListener('click', closeOrder, false);
 	document.getElementById("noPledge-bt").addEventListener('click', selectItem, false);
 	document.getElementById("bamboo-bt").addEventListener('click', selectItem, false);
