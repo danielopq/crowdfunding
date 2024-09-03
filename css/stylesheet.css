@@ -496,9 +496,13 @@ main {
 
 .item-name {
 	height: inherit;
-	float: left;
 	font: 700 18px/18px 'Commissioner';
 	color: black;
+}
+
+.item-pledge {
+	font: 500 15px 'Commissioner';
+	color: hsl(176, 50%, 47%);
 }
 
 .itemMainText {
@@ -507,9 +511,12 @@ main {
 	line-height: 30px;
 }
 
-.item-pledge {
-	font: 500 15px 'Commissioner';
-	color: hsl(176, 50%, 47%);
+.item-bottom {
+	height: 48px;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	margin-top: 24px;
 }
 
 .item-stock {
@@ -525,13 +532,7 @@ main {
 	margin-right: 8px;
 }
 
-.item-bottom {
-	height: 48px;
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	margin-top: 24px;
-}
+
 
 /*--------------------order--------------------*/
 #order {
@@ -770,7 +771,7 @@ main {
 	}
 
 	/*--------------------header--------------------*/
-	
+
 	header {
 		width: 100vw;
 		height: 300px;
@@ -796,7 +797,7 @@ main {
 	main {
 		display: flex;
 		width: 100vw;
-		height: 100%;
+		height: 2400px;
 		margin-top: 245px;
 	}
 
@@ -845,9 +846,7 @@ main {
 
 	#data {
 		height: 412px;
-		flex-direction: column;
 		align-items: center;
-
 	}
 
 	#dataDetails {
@@ -903,8 +902,9 @@ main {
 	/*-------------------- about --------------------*/
 
 	#about {
-		height: 1655px;
+		height: 1600px;
 		padding-top: 40px;
+
 	}
 
 	#about>div {
@@ -912,7 +912,7 @@ main {
 	}
 
 	#about-mainText {
-		height: 279px;
+		height: 382px;
 		margin-bottom: 40px;
 	}
 
@@ -926,80 +926,47 @@ main {
 		margin-top: 24px;
 	}
 
-	/* 
-				
-	#mahogany {
-		opacity: 40%;
-	}
-	
 	.item {
-		height: 248px;
-		display: flex;
+		height: 350px;
+	}
+
+	.item>div {
+		width: 231px;
+	}
+
+	.item-desc {
+		height: 42px;
 		flex-direction: column;
-		align-items: center;
-		border: solid 1px;
-		border-color: rgba(0,0,0,0.15);
-		border-radius: 8px;
+		margin: 24px 0px 24px 0px;
+	}
+
+	.item-name {
+		height: 17px;
+		font: 700 14px/17px 'Commissioner';
+	}
+
+	.item-pledge {
+		font: 500 14px/14px 'Commissioner';
+	}
+
+	.itemMainText {
+		height: 120px;
+		line-height: 24px;
+	}
+
+	.item-bottom {
+		height: 157px;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.item-stock {
 		margin-bottom: 24px;
 	}
-	
-	.item>div {
-		width: 570px;
-	}
-	
-	.item-desc {
-		height: 22px;
-		display: flex;
-		flex-direction: row;
-		justify-content: space-between;
-		align-content: center;
-		margin: 38px 0px 22px 0px;
-	}
-	
-	.item-name {
-		height: inherit;
-		float: left;
-		font: 700 18px/18px 'Commissioner';
-		color: black;
-	}
-	
-	.itemMainText {
-		width: inherit;
-		height: 60px;
-		line-height: 30px;
-	}
-	
-	.item-pledge {
-		font: 500 15px 'Commissioner';
-		color: hsl(176, 50%, 47%);
-	}
-	
-	.item-stock {
-		width: 410px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-	}
-	
+
 	.item-units {
-		font: 700 32px 'Commissioner';
-		color: black;
-		margin-right: 8px;
+		font: 700 18px 'Commissioner';
 	}
-	
-	.item-bottom {
-		height: 48px;
-		display: flex;
-		flex-direction: row;
-		align-items: center;
-		margin-top: 24px;
-	} */
-
-
-
-
-
-
 
 
 	/*--------------------order--------------------*/
