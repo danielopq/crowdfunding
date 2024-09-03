@@ -269,7 +269,7 @@ main {
 
 .main-section {
 	width: inherit;
-	margin-bottom: 24px;
+	margin-bottom: 22px;
 	background-color: white;
 	border: solid 2px #f6f6f6;
 	border-radius: 8px;
@@ -454,7 +454,7 @@ main {
 	flex-direction: column;
 	align-items: center;
 	justify-content: flex-start;
-	padding: 48px 0px;
+	padding: 46px 0px;
 }
 
 #about>div {
@@ -771,6 +771,7 @@ main {
 	.item>div {
 		width: 231px;
 	}
+
 	/*--------------------header--------------------*/
 
 	header {
@@ -969,7 +970,7 @@ main {
 	.overlap {
 		height: 2700px;
 	}
-	
+
 	#backProject {
 		width: 327px;
 		height: auto;
@@ -1048,7 +1049,33 @@ main {
 		justify-content: center;
 		margin: 16px 0px 24px;
 	}
+
 	.pledge-submit {
 		justify-content: space-between;
+	}
+
+	/*--------------------orderCompleted--------------------*/
+	
+	#orderCompleted {
+		width: 327px;
+		height: 382px;
+	}
+
+	#order-icon {
+		margin: 32px auto 24px;
+	}
+
+	#order-icon img {
+		width: 64px;
+	}
+
+	#orderCompleted p[class="default-title"] {
+		height: 22px;
+	}
+
+	#orderCompleted p[class="default-text"] {
+		width: 279px;
+		margin-top: 24px;
+		margin-bottom: 30px;
 	}
 }
