@@ -716,7 +716,7 @@ main {
 	position: fixed;
 	margin: auto;
 	background-color: white;
-	width: 440px;
+	width: 540px;
 	height: 460px;
 	top: 50%;
 	left: 50%;
@@ -734,9 +734,14 @@ main {
 	width: 90px;
 }
 
+#orderCompleted p[class="default-title"] {
+	height: 29px;
+}
+
 #orderCompleted p[class="default-text"] {
-	line-height: 2;
-	margin-bottom: 30px;
+	width: 444px;
+	line-height: 30px;
+	margin: 24px 0px 32px;
 }
 
 
@@ -1055,7 +1060,7 @@ main {
 	}
 
 	/*--------------------orderCompleted--------------------*/
-	
+
 	#orderCompleted {
 		width: 327px;
 		height: 382px;
@@ -1075,7 +1080,7 @@ main {
 
 	#orderCompleted p[class="default-text"] {
 		width: 279px;
-		margin-top: 24px;
-		margin-bottom: 30px;
+		margin: 24px 0px 30px;
+		line-height: 24px;
 	}
 }
