@@ -132,7 +132,7 @@ input[type="text"]:focus {
 	border-color: rgba(0, 0, 0, 0.15);
 	border-radius: 8px;
 	margin-bottom: 24px;
-	padding: 38px 0px;
+	padding: 40px 0px;
 }
 
 .item>div {
@@ -770,6 +770,7 @@ main {
 	}
 
 	.item {
+		height: auto;
 		padding: 24px 0px 24px 0px;
 	}
 
