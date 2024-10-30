@@ -53,27 +53,15 @@ input[type="text"]:focus {
 	align-items: center;
 }
 
-.section-bt:hover {
-	cursor: pointer;
-	opacity: 0.6;
-}
 
 .button {
 	border-radius: 33px;
 	border: none;
 }
 
-.button:hover {
-	cursor: pointer;
-}
-
 .enable-button {
 	background-color: hsl(176, 50%, 47%);
 	color: white;
-}
-
-.enable-button:hover {
-	background-color: hsl(176, 72%, 28%);
 }
 
 .disable-button {
@@ -93,6 +81,23 @@ input[type="text"]:focus {
 	float: right;
 	font: 700 14px/48px 'Commissioner';
 }
+
+@media(hover:hover) {
+	.section-bt:hover {
+		cursor: pointer;
+		opacity: 0.6;
+	}
+
+	.button:hover {
+		cursor: pointer;
+	}
+
+	.enable-button:hover {
+		background-color: hsl(176, 72%, 28%);
+	}
+}
+
+
 
 .default-title {
 	font: 700 20px/24px 'Commissioner';
@@ -247,10 +252,13 @@ menu {
 	font: 500 18px 'Commissioner';
 }
 
-.section-mb-bt:hover {
-	cursor: pointer;
-	opacity: 0.6;
+@media(hover:hover) {
+	.section-mb-bt:hover {
+		cursor: pointer;
+		opacity: 0.6;
+	}
 }
+
 
 #mb-discover {
 	border-top: solid 1px black;
@@ -341,8 +349,10 @@ main {
 	padding-left: 72px;
 }
 
-#top-buttons-bookmarkd:hover {
-	opacity: 70%;
+@media(hover:hover){
+	#top-buttons-bookmarkd:hover {
+		opacity: 70%;
+	}
 }
 
 .bookmark {
@@ -530,8 +540,6 @@ main {
 	margin-right: 8px;
 }
 
-
-
 /*--------------------order--------------------*/
 #order {
 	display: none;
@@ -573,9 +581,11 @@ main {
 	background: url("../images/icon-close-modal.svg") center/15px no-repeat;
 }
 
-.close:hover {
-	cursor: pointer;
-	background: url("../images/icon-close-modal-hover.svg") center/15px no-repeat;
+@media(hover:hover){
+	.close:hover {
+		cursor: pointer;
+		background: url("../images/icon-close-modal-hover.svg") center/15px no-repeat;
+	}
 }
 
 #backProject-header p[class="default-text"] {
