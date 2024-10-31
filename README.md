@@ -7,7 +7,6 @@
   - [Links](#links)
 - [My process](#my-process)
   - [Built with](#built-with)
-  - [Useful resources](#useful-resources)
 - [Author](#author)
 
 
@@ -17,13 +16,13 @@ Frontend development for a crowdfunding website. It is optimized for both deskto
 
 ### Screenshot
 
-- Desktop version: [https://github.com/danielopq/crowdfunding/blob/main/screenshots/desktop.jpg]
-- Mobile version: [https://github.com/danielopq/crowdfunding/blob/main/screenshots/mobile.jpg]
+- [Desktop version](https://github.com/danielopq/crowdfunding/blob/main/screenshots/desktop.jpg)
+- [Mobile version](https://github.com/danielopq/crowdfunding/blob/main/screenshots/mobile.jpg)
 
 
 ### Links
 
-- Live Site URL: [https://danielmartinez.co.uk/crowdfunding]
+- Live Site URL: [https://danielopq.github.io/crowdfunding]
 
 ## My process
 

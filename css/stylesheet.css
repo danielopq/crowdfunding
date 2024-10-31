@@ -452,7 +452,7 @@ main {
 }
 
 #data-progressBar {
-	width: 496px;
+	width: 0px;
 	height: inherit;
 	border-radius: 33px;
 	background-color: hsl(176, 50%, 47%);

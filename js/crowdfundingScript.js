@@ -129,16 +129,43 @@ const selectItem = (event) => {
 	}
 }
 
+
+const increaseBacked = (pledgeAmount) => {
+    const totalAmountText = document.querySelector('#backed').innerText;
+    const totalBackers = document.querySelector('#backers').innerText;
+    const totalAmount = parseFloat(totalAmountText.replace(/[$,]/g, ''));
+    const newTotal = totalAmount + Number(pledgeAmount);
+    document.querySelector('#backed').textContent = `$${newTotal.toLocaleString()}`;
+    document.querySelector('#backers').textContent = Number(totalBackers) + 1;
+	setProgressBar();
+}
+
+const setProgressBar = ()=>{
+    const backgroundBar = document.getElementById('data-backgroundBar');
+    const backgroundBarWidth = backgroundBar.offsetWidth;
+    const totalBacked = Number((document.querySelector('#backed').textContent).substring(1));
+    const progressBarWidth = (backgroundBarWidth * totalBacked) / 100000;
+    console.log('progressBarWidth:', progressBarWidth)
+	progressBarWidth <= backgroundBarWidth ?  
+    document.getElementById('data-progressBar').style.width = `${progressBarWidth}px` :
+	document.getElementById('data-progressBar').style.width = progressBarWidth;
+}
+
 /**
  * Displays a thank you window.
  * @param {Event} event 
  */
-const sendOrder = (event) => {
-	if (validatePledge(event.target.attributes["id"].value)) {
+
+const sendOrder = (event,pledgeAmount)=>{
+	const pledgeValue = event.target.attributes["id"].value;
+	if (validatePledge(pledgeValue)) {
 		document.getElementById("orderCompleted").style.display = "flex";
 		document.getElementById("backProject").style.display = "none";
+		increaseBacked(pledgeAmount);
 	}
 }
+
+
 
 /**
  * Closes the order window.
@@ -220,10 +247,10 @@ const validatePledge = (source) => {
 	document.getElementById("bamboo-bt").addEventListener('click', selectItem, false);
 	document.getElementById("black-bt").addEventListener('click', selectItem, false);
 	document.getElementById("mahogany-bt").addEventListener('click', selectItem, false);
-	document.getElementById("noPledge-continue").addEventListener('click', sendOrder, false);
-	document.getElementById("bamboo-continue").addEventListener('click', sendOrder, false);
-	document.getElementById("black-continue").addEventListener('click', sendOrder, false);
-	document.getElementById("mahogany-continue").addEventListener('click', sendOrder, false);
+	document.getElementById("noPledge-continue").addEventListener('click', (event)=>sendOrder(event,document.getElementById('noPledge-inp').value), false);
+	document.getElementById("bamboo-continue").addEventListener('click', (event)=>sendOrder(event,document.getElementById('bamboo-inp').value), false);
+	document.getElementById("black-continue").addEventListener('click', (event)=>sendOrder(event,document.getElementById('black-inp').value), false);
+	document.getElementById("mahogany-continue").addEventListener('click', (event)=>sendOrder(event,document.getElementById('mahogany-inp').value), false);
 	document.getElementById("gotIt-bt").addEventListener('click', closeOrder, false);
 	document.getElementById("noPledge-inp").addEventListener('keyup', validateNumber, false);
 	document.getElementById("bamboo-inp").addEventListener('keyup', validateNumber, false);
