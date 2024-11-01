@@ -636,12 +636,14 @@ main {
 	flex-direction: row;
 	justify-content: flex-start;
 	align-items: center;
-	font: 700 16px 'Commissioner';
 }
 
 .info-name {
 	margin-right: 20px;
-	color: black;
+	padding: 0px;
+	border: 0px;
+	background-color: transparent;
+	font: 700 16px 'Commissioner';
 }
 
 .info-pledge {
@@ -659,10 +661,18 @@ main {
 	grid-column-end: 5;
 }
 
-.inStock:hover {
-	cursor: pointer;
-	color: hsl(176, 50%, 47%);
+.inStock{
+	color:black;
+	transition: color 0.3s ease;
 }
+
+@media(hover:hover){
+	.inStock:hover {
+		cursor: pointer;
+		color: hsl(176, 50%, 47%);
+	}
+}
+
 
 .item-rad {
 	appearance: none;
@@ -1036,12 +1046,12 @@ main {
 		justify-content: center;
 		align-items: flex-start;
 		height: 42px;
-		font: 700 14px 'Commissioner';
 	}
 
 	.info-name {
 		height: 17px;
 		margin: 0px;
+		font: 700 14px 'Commissioner';
 	}
 
 	.info-pledge {
