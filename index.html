@@ -16,27 +16,27 @@
 	<header>
 		<menu id="menu">
 			<div id="menu-logo"></div>
-			<div id="menu-hamburger" class="menu-icon"></div>
+			<div id="menu-hamburger" class="menu-icon" aria-label="show menu"></div>
 			<div id="menu-links">
-				<button class="section-bt">About</button>
-				<button class="section-bt">Discover</button>
-				<button class="section-bt">Get Started</button>
+				<button class="section-bt" aria-label="About">About</button>
+				<button class="section-bt" aria-label="Discover">Discover</button>
+				<button class="section-bt" aria-label="Get Started">Get Started</button>
 			</div>
 		</menu>
 		<div id="menu-mobile" class="overlap">
 			<div id="menu-mobile-top">
 				<div id="mobile-logo"><img src="images/logo.svg" alt="" id="mobile-logo-img" /></div>
-				<div id="mobile-close" class="menu-icon"></div>
+				<div id="mobile-close" class="menu-icon" aria-label="close menu"></div>
 			</div>
 			<div id="mobile-links">
 				<div id="mb-about">
-					<button class="section-mb-bt">About</button>
+					<button class="section-mb-bt" aria-label="About">About</button>
 				</div>
 				<div id="mb-discover">
-					<button class="section-mb-bt">Discover</button>
+					<button class="section-mb-bt" aria-label="Discover">Discover</button>
 				</div>
 				<div id="mb-getStarted">
-					<button class="section-mb-bt">Get Started</button>
+					<button class="section-mb-bt" aria-label="Get Started">Get Started</button>
 				</div>
 			</div>
 		</div>
@@ -50,9 +50,9 @@
 				<p id="main-text">A beautiful &amp; handcrafted monitor stand to reduce neck and eye strain. </p>
 			</div>
 			<div id="top-buttons">
-				<button id="top-buttons-back" class="button enable-button">Back this project</button>
-				<button id="top-buttons-bookmark" class="button bookmark">Bookmark</button>
-				<button id="top-buttons-bookmark-mb" class="mb-bookmark"></button>
+				<button id="top-buttons-back" class="button enable-button" aria-label="Back this project">Back this project</button>
+				<button id="top-buttons-bookmark" class="button bookmark" aria-label="Bookmark">Bookmark</button>
+				<button id="top-buttons-bookmark-mb" class="mb-bookmark" aria-label="Bookmark"></button>
 			</div>
 		</div>
 
@@ -108,7 +108,7 @@
 						<p class="item-units">101</p>
 						<p class="default-text">left</p>
 					</div>
-					<button id="bamboo-reward-bt" class="enable-button button reward-bt">Select Reward</button>
+					<button id="bamboo-reward-bt" class="enable-button button reward-bt" aria-label="Select Reward">Select Reward</button>
 				</div>
 			</div>
 		<!-- ---------------- ABOUT/BLACK EDITION ---------------- -->
@@ -126,7 +126,7 @@
 						<p class="item-units">64</p>
 						<p class="default-text">left</p>
 					</div>
-					<button id="black-reward-bt" class="enable-button button reward-bt">Select Reward</button>
+					<button id="black-reward-bt" class="enable-button button reward-bt" aria-label="Select Reward">Select Reward</button>
 				</div>
 			</div>
 			<!-- ---------------- ABOUT/MAHOGANY ---------------- -->
@@ -144,7 +144,7 @@
 						<p class="item-units">0</p>
 						<p class="left-text">left</p>
 					</div>
-					<button id="mahogany-reward-bt" class="disable-button button reward-bt">Out of stock</button>
+					<button id="mahogany-reward-bt" class="disable-button button reward-bt" aria-label="Select Reward">Out of stock</button>
 				</div>
 			</div>
 		</div>
@@ -166,7 +166,7 @@
 				<div class="item-info flexRowcenter">
 					<input type="radio" id="radio-noPledge" name="item" value="bamboo" disabled class="info-radioBut item-rad">
 					<div class="info-namePledge flexRowleft">
-						<button id="noPledge-bt" class="info-name inStock">Pledge with no reward</button>
+						<button id="noPledge-bt" class="info-name inStock" aria-label="Pledge with no reward">Pledge with no reward</button>
 					</div>
 					<div class="item-description">
 						<p class="default-text  itemMainText">Choose to support us without a reward if you simply believe in our
@@ -180,7 +180,7 @@
 					</div>
 					<div class="pledge-submit">
 						<div class="submit-input dollar">$<input id="noPledge-inp" type="text" value="0"></div>
-						<button id="noPledge-continue" class="button enable-button continue-bt">Continue</button>
+						<button id="noPledge-continue" class="button enable-button continue-bt" aria-label="Continue">Continue</button>
 					</div>
 				</div>
 			</div>
@@ -190,7 +190,7 @@
 					<input type="radio" id="radio-bamboo" name="item" value="bamboo" disabled
 						class="info-radioBut item-rad">
 					<div class="info-namePledge">
-						<button id="bamboo-bt" class="info-name inStock">Bamboo Stand</button>
+						<button id="bamboo-bt" class="info-name inStock" aria-label="Bamboo Stand">Bamboo Stand</button>
 						<p class="info-pledge">Pledge $25 or more</p>
 					</div>
 					<div class="info-remainingStock flexRowleft">
@@ -209,7 +209,7 @@
 					</div>
 					<div class="pledge-submit">
 						<div class="submit-input dollar">$<input id="bamboo-inp" type="text" value="25"></div>
-						<button id="bamboo-continue" class="button enable-button continue-bt">Continue</button>
+						<button id="bamboo-continue" class="button enable-button continue-bt" aria-label="Continue">Continue</button>
 					</div>
 				</div>
 			</div>
@@ -219,7 +219,7 @@
 					<input type="radio" id="radio-black" name="item" value="black" disabled
 						class="info-radioBut item-rad">
 					<div class="info-namePledge">
-						<button id="black-bt" class="info-name inStock">Black Edition Stand</button>
+						<button id="black-bt" class="info-name inStock" aria-label="Black Edition Stand">Black Edition Stand</button>
 						<p class="info-pledge">Pledge $75 or more</p>
 					</div>
 					<div class="info-remainingStock flexRowleft">
@@ -238,7 +238,7 @@
 					</div>
 					<div class="pledge-submit">
 						<div class="submit-input dollar">$<input id="black-inp" type="text" value="75"></div>
-						<button id="black-continue" class="button enable-button continue-bt">Continue</button>
+						<button id="black-continue" class="button enable-button continue-bt" aria-label="Continue">Continue</button>
 					</div>
 				</div>
 			</div>
@@ -248,7 +248,7 @@
 					<input type="radio" id="radio-mahogany" name="item" value="mahogany" disabled
 						class="info-radioBut item-rad">
 					<div class="info-namePledge">
-						<button id="mahogany-bt" class="info-name">Mahogany Special Edition</button>
+						<button id="mahogany-bt" class="info-name"  aria-label="Mahogany Special Edition">Mahogany Special Edition</button>
 						<p class="info-pledge">Pledge $200 or more</p>
 					</div>
 					<div class="info-remainingStock flexRowleft">
@@ -267,7 +267,7 @@
 					</div>
 					<div class="pledge-submit">
 						<div class="submit-input dollar">$<input id="mahogany-inp" type="text" value="200"></div>
-						<button id="mahogany-continue" class="button disable-button continue-bt">Continue</button>
+						<button id="mahogany-continue" class="button disable-button continue-bt" aria-label="Continue">Continue</button>
 					</div>
 				</div>
 			</div>
@@ -281,7 +281,7 @@
 					will get an email once our campaign is completed.
 				</p>
 			</div>
-			<button id="gotIt-bt" class="button enable-button continue-bt">Got it!</button>
+			<button id="gotIt-bt" class="button enable-button continue-bt" aria-label="Got it">Got it!</button>
 		</div>
 	</div>
 	<script type="text/javascript" src="js/crowdfundingScript.js"></script>
