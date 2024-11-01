@@ -3,7 +3,7 @@
 
 
 /**
- * Displays the mobile menu.
+ * Displays the mobile menu by setting it to "flex" and hides the logo and hamburger menu icons.
  */
 
 const showMobileMenu = () => {
@@ -13,7 +13,7 @@ const showMobileMenu = () => {
 }
 
 /**
- * Hides the mobile menu
+ * Hides the mobile menu by setting it to "none" and shows the logo and hamburger menu icons.
  */
 
 const hideMobileMenu = () => {
@@ -23,7 +23,7 @@ const hideMobileMenu = () => {
 }
 
 /**
- * Modifies the bookmark button's state.
+ * Toggles the bookmark button state between bookmarked and not bookmarked.
  */
 
 const bookmark = () => {
@@ -39,8 +39,8 @@ const bookmark = () => {
 }
 
 /**
- * Opens the order window dialog.
- * @param {Event} event 
+ * Opens the order window and highlights the selected pledge option if available.
+ * @param {Event} event - The click event of the button that opens the order window.
  */
 
 const openOrder = (event) =>{
@@ -70,8 +70,7 @@ const openOrder = (event) =>{
 }
 
 /**
- * Resets pledge values to the initial ones, unchecks radio buttons,
- * resets order border colors, and hides pledges.
+ * Resets pledge values to default, unchecks radio buttons, resets border colors, and hides pledge options.
  */
 
 const resetPledges = () => {
@@ -97,8 +96,8 @@ const resetPledges = () => {
 }
 
 /**
- * Selects a product by enabling pledges and changing the border color.
- * @param {Event} event 
+ * Highlights a selected product option, displays corresponding pledge input, and changes the border color.
+ * @param {Event} event - The click event of the button that selects the pledge option.
  */
 
 const selectItem = (event) => {
@@ -129,33 +128,47 @@ const selectItem = (event) => {
 	}
 }
 
-
-const increaseBacked = (pledgeAmount) => {
-    const totalAmountText = document.querySelector('#backed').innerText;
-    const totalBackers = document.querySelector('#backers').innerText;
-    const totalAmount = parseFloat(totalAmountText.replace(/[$,]/g, ''));
-    const newTotal = totalAmount + Number(pledgeAmount);
-    document.querySelector('#backed').textContent = `$${newTotal.toLocaleString()}`;
-    document.querySelector('#backers').textContent = Number(totalBackers) + 1;
-	setProgressBar();
-}
-
-const setProgressBar = ()=>{
-    const backgroundBar = document.getElementById('data-backgroundBar');
-    const backgroundBarWidth = backgroundBar.offsetWidth;
-    const totalBacked = Number((document.querySelector('#backed').textContent).substring(1));
-    const progressBarWidth = (backgroundBarWidth * totalBacked) / 100000;
-    console.log('progressBarWidth:', progressBarWidth)
-	progressBarWidth <= backgroundBarWidth ?  
-    document.getElementById('data-progressBar').style.width = `${progressBarWidth}px` :
-	document.getElementById('data-progressBar').style.width = progressBarWidth;
+/**
+ * Retrieves the total amount backed as an integer after removing thousand separators.
+ * @returns {number} - Total backed amount as an integer.
+ */
+const getTotalBacked = ()=>{
+    let totalBacked =document.querySelector('#backed').innerText.substring(1);
+	totalBacked = totalBacked.replace(/\./g, '');
+	totalBacked = parseInt(totalBacked);
+	return(totalBacked);
 }
 
 /**
- * Displays a thank you window.
- * @param {Event} event 
+ * Updates the progress bar based on the total backed amount compared to the goal of $100,000.
  */
+const setProgressBar = ()=>{
+    const backgroundBar = document.getElementById('data-backgroundBar');
+    const backgroundBarWidth = backgroundBar.offsetWidth;
+    const totalBacked = getTotalBacked();
+    const progressBarWidth = (backgroundBarWidth * totalBacked) / 100000;
+	progressBarWidth <= backgroundBarWidth ?  
+    document.getElementById('data-progressBar').style.width = `${progressBarWidth}px` :
+	document.getElementById('data-progressBar').style.width = `${backgroundBarWidth}px`;
+}
 
+/**
+ * Increases the total backed amount and the number of backers, then updates the progress bar.
+ * @param {string} pledgeAmount - Pledge amount donated by the user.
+ */
+const increaseBacked = (pledgeAmount) => {
+	const totalBacked = getTotalBacked();
+    const totalBackers = document.querySelector('#backers').innerText;
+    const newTotal = totalBacked + parseInt(pledgeAmount);
+    document.querySelector('#backed').textContent = `$${newTotal.toLocaleString()}`;
+    document.querySelector('#backers').textContent = parseInt(totalBackers) + 1;
+	setProgressBar();
+}
+
+/**
+ * Displays a thank-you message and increases the total backed amount and number of backers.
+ * @param {Event} event - The click event of the button that confirms the pledge.
+ */
 const sendOrder = (event,pledgeAmount)=>{
 	const pledgeValue = event.target.attributes["id"].value;
 	if (validatePledge(pledgeValue)) {
@@ -165,10 +178,8 @@ const sendOrder = (event,pledgeAmount)=>{
 	}
 }
 
-
-
 /**
- * Closes the order window.
+ * Closes the order window and the thank-you message.
  */
 
 const closeOrder = () => {
@@ -178,9 +189,8 @@ const closeOrder = () => {
 }
 
 /**
- * Validates pledge values by ensuring that the text field contains only numbers,
- * is not empty, and does not have a leading zero.
- * @param {Event} event 
+ * Validates that the pledge input only contains numbers, is not empty, and does not start with zero.
+ * @param {Event} event - The input event for the pledge input field.
  */
 
 const validateNumber = (event) => {
@@ -198,9 +208,11 @@ const validateNumber = (event) => {
 }
 
 /**
- * Corrects pledge values according to the minimums.
- * @param {String} source 
- * @returns {Boolean}
+ * Validates the pledge amount for each reward tier, adjusting it to the minimum allowed
+ * value if the input is below the required amount. Returns true if the pledge amount meets 
+ * the minimum requirement, or false otherwise.
+ * @param {string} source - The ID of the source element triggering the validation.
+ * @returns {boolean} - True if the pledge amount is valid, false otherwise.
  */
 const validatePledge = (source) => {
 	let rightAmount = false;
