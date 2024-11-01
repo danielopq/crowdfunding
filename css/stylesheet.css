@@ -82,6 +82,16 @@ input[type="text"]:focus {
 	font: 700 14px/48px 'Commissioner';
 }
 
+.section-bt{
+	border: none;
+	padding: 0px;
+	font: 400 13px 'Commissioner';
+	color: white;
+	background-color: transparent;
+	transition: opacity 0.3s ease;
+}
+
+
 @media(hover:hover) {
 	.section-bt:hover {
 		cursor: pointer;
@@ -186,7 +196,6 @@ menu {
 	flex-direction: row;
 	align-items: center;
 	justify-content: space-between;
-	font: 400 13px 'Commissioner';
 	color: white;
 }
 
